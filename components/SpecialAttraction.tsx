@@ -61,8 +61,8 @@ function SpecialAttractionCard({
         className={twMerge([
           // for hover effect
           "border relative bg-gray-900 border-white  after:bg-white after:content-[' '] after:block after:h-full after:w-full after:translate-x-[3px] after:translate-y-[3px] after:transition-transform after:duration-[0.2s] after:ease-[ease-out] after:z-[-1] after:absolute after:top-0 after:left-0  hover:after:translate-x-0 hover:after:translate-y-0 active:translate-x-0 active:translate-y-0",
-          "h-56 md:h-[500px]",
-          "h-48 md:h-[500px]",
+
+          wfull ? "h-48 md:h-[500px]" : "h-56 md:h-[500px]",
           "flex items-end justify-center",
         ])}
       >
