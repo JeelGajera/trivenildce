@@ -1,9 +1,9 @@
-import { Button } from "@/components/ui/button";
+import SpecialAtrraction from "@/components/SpecialAttraction";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between">
-      <Button>Test Button</Button>
+    <main className="">
+      <SpecialAtrraction />
     </main>
   );
 }
