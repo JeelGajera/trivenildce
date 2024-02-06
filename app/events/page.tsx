@@ -62,6 +62,7 @@ function AllEvents({}: Props) {
         {Array.from({ length: 10 }).map((_, i) => {
           return (
             <Badge
+              key={i}
               variant={i === 0 ? "default" : "outline"}
               className="text-white whitespace-nowrap my-2"
             >
