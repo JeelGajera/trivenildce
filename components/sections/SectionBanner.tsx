@@ -1,7 +1,5 @@
 import Image from "next/image";
 
-import { actor } from "@/lib/fonts";
-
 const SectionBanner = () => {
   return (
     <section className="mb-30 overflow-hidden select-none">
@@ -14,9 +12,7 @@ const SectionBanner = () => {
         />
         {/* overlay */}
         <div className="absolute top-0 left-0 h-full w-full bg-black/70 flex items-center justify-center">
-          <h1
-            className={`text-white text-center text-[40px] md:text-[70px] font-bold ${actor.className}`}
-          >
+          <h1 className="text-white text-center text-[40px] md:text-[70px] font-bold font-actor">
             Embark on the Journey of <br /> Diversity and Creativity!
           </h1>
         </div>

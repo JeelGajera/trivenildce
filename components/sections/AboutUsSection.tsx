@@ -1,14 +1,11 @@
 import Image from "next/image";
 
-import { actor } from "@/lib/fonts";
-import { cn } from "@/lib/utils";
-
 const AboutUsSection = () => {
   return (
     <section className="container my-[100px] flex flex-col-reverse md:flex-row w-full gap-8 select-none">
       {/* left part */}
       <div className="w-full md:w-1/2">
-        <h1 className={cn("text-6xl font-bold my-10 md:my-0", actor.className)}>
+        <h1 className="text-6xl font-bold my-10 md:my-0 font-actor">
           About Us
         </h1>
         <div className="my-[30px]">
