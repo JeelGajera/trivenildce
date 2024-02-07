@@ -1,5 +1,6 @@
 import EventCard from "@/components/sections/EventCard";
 import { Badge } from "@/components/ui/badge";
+import { reader } from "@/lib/reader";
 
 type Props = {};
 
@@ -50,8 +51,18 @@ const fakeEvents = [
     imageUrl: "https://source.unsplash.com/random?robot",
   },
 ];
+
 // TODO: Implement filters and pagination
-function AllEvents({}: Props) {
+async function AllEvents({}: Props) {
+  const eventsPromise = reader.collections.events.all();
+  const domainsPromise = reader.collections.domains.all();
+
+  const [events, domains] = await Promise.all([eventsPromise, domainsPromise]);
+  if (events.length < 1) {
+    // TODO: Add a better message
+    return <>No Events</>;
+  }
+
   return (
     <div className="container">
       <h1 className="text-4xl text-center hidden md:block">
@@ -59,26 +70,30 @@ function AllEvents({}: Props) {
         2k24 Events that Transcend Imagination!
       </h1>
       <div className="flex overflow-x-auto flex-shrink-0 gap-2 my-5">
-        {Array.from({ length: 10 }).map((_, i) => {
+        {domains.map((domain, i) => {
           return (
             <Badge
-              key={i}
+              key={domain.slug}
               variant={i === 0 ? "default" : "outline"}
               className="text-white whitespace-nowrap my-2"
             >
-              Category {i + 1}
+              {domain.entry.name}
             </Badge>
           );
         })}
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
-        {fakeEvents.map((event) => {
+        {events.map((event) => {
           return (
             <EventCard
-              href={event.href}
-              imageUrl={event.imageUrl}
-              title={event.title}
-              key={event.href}
+              href={"/events/" + event.slug}
+              imageUrl={
+                `https://wsrv.nl/?url=raw.githubusercontent.com/mdhruvil/triveni/main/content/events/${event.slug}/${event.entry.eventImg}&h=300` ??
+                ""
+              }
+              title={event.entry.name}
+              key={event.slug}
+              badges={event.entry.entryType}
             />
           );
         })}
