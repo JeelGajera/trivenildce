@@ -15,7 +15,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${actor.variable} bg-gray-900 text-white font-inter`}
+        className={`${inter.variable} ${actor.variable} bg-gray-900 text-white font-inter w-screen h-screen`}
       >
         {children}
       </body>

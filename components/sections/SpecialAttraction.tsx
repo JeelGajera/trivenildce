@@ -12,13 +12,15 @@ function SpecialAttraction() {
     <div className="container">
       <div className="flex justify-between items-center">
         <h1 className="text-2xl md:text-3xl">Special Attraction</h1>
-        <Button
-          variant="link"
-          className="text-gray-500 hover:text-gray-300 hidden md:flex items-center"
-        >
-          View All Events
-          <ArrowRightIcon className="ml-1 w-4 h-4" />
-        </Button>
+        <Link href="/events">
+          <Button
+            variant="link"
+            className="text-gray-500 hover:text-gray-300 hidden md:flex items-center"
+          >
+            View All Events
+            <ArrowRightIcon className="ml-1 w-4 h-4" />
+          </Button>
+        </Link>
       </div>
       <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-5 md:mt-7">
         <SpecialAttractionCard
@@ -36,10 +38,12 @@ function SpecialAttraction() {
         />
       </div>
       <div className="flex justify-center mt-5 md:hidden">
-        <Button variant="link" className="text-gray-500 hover:text-gray-300">
-          View All Events
-          <ArrowRightIcon className="ml-1 w-4 h-4" />
-        </Button>
+        <Link href="/events">
+          <Button variant="link" className="text-gray-500 hover:text-gray-300">
+            View All Events
+            <ArrowRightIcon className="ml-1 w-4 h-4" />
+          </Button>
+        </Link>
       </div>
     </div>
   );

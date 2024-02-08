@@ -6,6 +6,11 @@ export default config({
     repo: "mdhruvil/triveni",
     branchPrefix: "keystatic/",
   },
+  ui: {
+    brand: {
+      name: "Triveni 2k24",
+    },
+  },
   collections: {
     events: collection({
       label: "Events",
