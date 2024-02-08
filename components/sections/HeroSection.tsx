@@ -6,8 +6,8 @@ const HeroSection = () => {
     <div className="hero min-h-screen mb-10" style={{backgroundImage: 'url(/images/HeroSection.png)'}}>
   <div className="hero-overlay bg-opacity-65 bg-gray-950"></div>
   <div className="container flex items-center flex-wrap justify-center md:justify-between lg:justify-between w-[98%]">
-    <div className="text w-[100%] md:w-[50%] lg:w-[50%] p-3">
-        <h1 className='text-4xl md:text-5xl lg:text-7xl' style={{fontFamily: "Kalnia, sarif"}}>Only he who attempts  the absurd is  capable of achieving the impossible</h1>
+    <div className="text w-[100%] md:w-[50%] lg:w-[60%] p-3">
+        <h1 className='text-4xl md:text-5xl lg:text-7xl' style={{fontFamily: "Kalnia, sarif"}}>Triveni 2k24 - Embark on the journey on InnoCulture</h1>
         <div className="buttons mt-10 w-[100%]">
           <button className='p-3 mr-5 inline-flex items-center justify-center opacity-90 hover:opacity-100 w-[20sem] sm:w[5em]' style={{backgroundColor: "blue", fontWeight: "500"}}>
             <span className='mr-3'>View All Events</span>
