@@ -25,8 +25,25 @@ function DomainsFilter({ domains }: Props) {
     }
     replace(`${pathname}?${params.toString()}`);
   }
+
+  function handleAllClick() {
+    const params = new URLSearchParams(searchParams);
+    if (params.get("q")) {
+      params.delete("q");
+      replace(`${pathname}?${params.toString()}`);
+    }
+  }
   return (
     <div className="flex overflow-x-auto flex-shrink-0 gap-2 my-5">
+      <Badge
+        variant={
+          !new URLSearchParams(searchParams).has("q") ? "default" : "outline"
+        }
+        className="cursor-pointer text-white whitespace-nowrap my-2"
+        onClick={() => handleAllClick()}
+      >
+        All
+      </Badge>
       {domains.map((domain, i) => {
         return (
           <Badge
