@@ -1,6 +1,10 @@
+import { PageProps } from "@/.next/types/app/events/page";
 import EventCard from "@/components/sections/EventCard";
-import { Badge } from "@/components/ui/badge";
+import DomainsFilter from "@/components/sections/events/DomainsFilter";
+
 import { reader } from "@/lib/reader";
+import { DocumentElement } from "@keystatic/core";
+import { Suspense } from "react";
 
 type Props = {};
 
@@ -53,15 +57,13 @@ const fakeEvents = [
 ];
 
 // TODO: Implement filters and pagination
-async function AllEvents({}: Props) {
+async function AllEvents({ searchParams: sp }: PageProps) {
   const eventsPromise = reader.collections.events.all();
   const domainsPromise = reader.collections.domains.all();
 
   const [events, domains] = await Promise.all([eventsPromise, domainsPromise]);
-  if (events.length < 1) {
-    // TODO: Add a better message
-    return <>No Events</>;
-  }
+
+  const searchParams = new URLSearchParams(sp);
 
   return (
     <div className="container">
@@ -69,37 +71,67 @@ async function AllEvents({}: Props) {
         Experience the Extraordinary: Triveni <br />
         2k24 Events that Transcend Imagination!
       </h1>
-      <div className="flex overflow-x-auto flex-shrink-0 gap-2 my-5">
-        {domains.map((domain, i) => {
-          return (
-            <Badge
-              key={domain.slug}
-              variant={i === 0 ? "default" : "outline"}
-              className="text-white whitespace-nowrap my-2"
-            >
-              {domain.entry.name}
-            </Badge>
-          );
-        })}
-      </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
-        {events.map((event) => {
-          return (
-            <EventCard
-              href={"/events/" + event.slug}
-              imageUrl={
-                `https://wsrv.nl/?url=raw.githubusercontent.com/mdhruvil/triveni/main/content/events/${event.slug}/${event.entry.eventImg}&h=300` ??
-                ""
-              }
-              title={event.entry.name}
-              key={event.slug}
-              badges={event.entry.entryType}
-            />
-          );
-        })}
-      </div>
+      <DomainsFilter domains={domains} />
+      <Suspense key={searchParams.get("q")} fallback="Loading...">
+        <Events query={searchParams.get("q")} events={events} />
+      </Suspense>
     </div>
   );
 }
 
 export default AllEvents;
+
+async function sleep(ms: number) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+async function Events({
+  query,
+  events,
+}: {
+  query: string | null;
+  events: {
+    slug: string;
+    entry: {
+      name: string;
+      description: () => Promise<DocumentElement[]>;
+      eventImg: string | null;
+      entryFee: string;
+      eventDateAndTime: {
+        readonly date: string | null;
+        readonly time: string;
+      };
+      entryType: readonly ("solo" | "team")[];
+      prize: string;
+      domain: string | null;
+    };
+  }[];
+}) {
+  if (query) events = events.filter((event) => event.entry.domain === query);
+
+  if (events.length < 1)
+    return (
+      <div className="text-center text-2xl">
+        No events found. Try Changing the Event domain.
+      </div>
+    );
+
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+      {events.map((event) => {
+        return (
+          <EventCard
+            href={"/events/" + event.slug}
+            imageUrl={
+              `https://wsrv.nl/?url=raw.githubusercontent.com/mdhruvil/triveni/main/content/events/${event.slug}/${event.entry.eventImg}&h=300` ??
+              ""
+            }
+            title={event.entry.name}
+            key={event.slug}
+            badges={event.entry.entryType}
+          />
+        );
+      })}
+    </div>
+  );
+}
