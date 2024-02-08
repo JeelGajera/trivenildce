@@ -78,7 +78,7 @@ const config = {
       actor: "var(--font-actor)",
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate"), require("daisyui")],
 } satisfies Config;
 
 export default config;
