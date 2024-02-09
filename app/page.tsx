@@ -5,7 +5,7 @@ import SpecialAttraction from "@/components/sections/SpecialAttraction";
 
 export default function Home() {
   return (
-    <main>
+    <main className="overflow-x-hidden">
       <HeroSection />
       <SpecialAttraction />
 

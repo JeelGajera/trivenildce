@@ -2,7 +2,10 @@ import Image from "next/image";
 
 const AboutUsSection = () => {
   return (
-    <section className="container my-[100px] flex flex-col-reverse md:flex-row w-full gap-8 select-none">
+    <section
+      className="container my-[100px] flex flex-col-reverse md:flex-row w-full gap-8 select-none"
+      id="about"
+    >
       {/* left part */}
       <div className="w-full md:w-1/2">
         <h1 className="text-6xl font-bold my-10 md:my-0 font-actor">

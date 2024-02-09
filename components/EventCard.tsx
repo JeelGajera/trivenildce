@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { Badge } from "../ui/badge";
+import { Badge } from "./ui/badge";
 
 type Props = {
   title: string;
@@ -19,7 +19,7 @@ function EventCard({ imageUrl, title, href, badges }: Props) {
           alt={title}
           className="object-cover rounded-lg w-full h-full"
         />
-        <div className="z-50 absolute bottom-0 left-0 pb-2 pl-4 w-full bg-gradient-to-t from-black/80">
+        <div className="z-10 absolute bottom-0 left-0 pb-2 pl-4 w-full bg-gradient-to-t from-black/80">
           <div className="flex gap-2 mb-1">
             {badges.map((badge) => (
               <Badge key={badge}>{badge === "solo" ? "Solo" : "Team"}</Badge>

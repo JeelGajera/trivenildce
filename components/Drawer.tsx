@@ -23,17 +23,18 @@ const Drawer = () => {
               translateY: "-100%",
             }}
             transition={{ duration: 0.3, type: "spring" }}
-            className="fixed top-0 left-0 right-0 h-[500px] bg-yellow-500 w-screen z-50 rounded-b-[60px] origin-top-right"
+            className="fixed top-0 left-0 right-0 h-[500px] bg-yellow-500 w-screen z-[100] rounded-b-[60px] origin-top-right"
           >
             <div className="flex flex-col gap-10 p-[70px] h-full justify-end">
               {NAV_ITEMS.map((item, index) => (
-                <Link
+                <a
                   href={item.href}
                   key={index + item.label + item.href + "MOBILE_DRAWER"}
                   className="text-4xl font-bold underline underline-offset-4"
+                  onClick={close}
                 >
                   {item.label}
-                </Link>
+                </a>
               ))}
             </div>
           </motion.div>
@@ -42,7 +43,7 @@ const Drawer = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={close}
-            className="h-screen w-screen bg-black/50 fixed top-0 left-0 right-0 z-10"
+            className="h-screen w-screen bg-black/50 fixed top-0 left-0 right-0 z-20"
           />
         </>
       )}

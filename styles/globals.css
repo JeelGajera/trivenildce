@@ -6,6 +6,10 @@
 :root {
   --primary-blue: #0303e9;
   --primary-blue-hovered: #0303ff;
+  --primary-dark: #000025;
+}
+* {
+  scroll-behavior: smooth;
 }
 @layer base {
   :root {

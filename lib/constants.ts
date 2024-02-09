@@ -1,18 +1,18 @@
 export const NAV_ITEMS = [
   {
     label: "Home",
-    href: "/",
+    href: "#home",
   },
   {
     label: "Events",
-    href: "/events",
+    href: "#events",
   },
   {
-    label: "Contact",
-    href: "/contact",
+    label: "About",
+    href: "#about",
   },
   {
     label: "Sponsors",
-    href: "/sponsors",
+    href: "#sponsors",
   },
 ];
