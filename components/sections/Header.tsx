@@ -17,7 +17,6 @@ const Header = () => {
   const pathName = usePathname();
 
   const [scrollFlg, setScrollFlg] = useState(false);
-  const [currentSectionHash, setCurrentSectionHash] = useState("");
 
   useEffect(() => {
     function handleScroll() {
@@ -27,30 +26,10 @@ const Header = () => {
         setScrollFlg(false);
       }
     }
-    function handleScrollSectionID() {
-      const sections = document.querySelectorAll("section");
-      sections.forEach((section) => {
-        const rect = section.getBoundingClientRect();
-        if (rect.top <= 100 && rect.bottom >= 100) {
-          window.location.hash = `#${section.id}`;
-        }
-      });
-    }
-    function handleHashchange() {
-      const hash = window.location.hash;
-      setCurrentSectionHash(hash);
-    }
-
-    // initializing the hash
-    // window.location.hash = "#home";
     window.addEventListener("scroll", handleScroll);
-    window.addEventListener("hashchange", handleHashchange);
-    window.addEventListener("scroll", handleScrollSectionID);
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
-      window.removeEventListener("hashchange", handleHashchange);
-      window.removeEventListener("scroll", handleScrollSectionID);
     };
   }, []);
 
@@ -77,11 +56,7 @@ const Header = () => {
           {NAV_ITEMS.map((item, index) => (
             <a
               key={item.href + item.label + index + "NAV_ITEMS_DESKTOP"}
-              className={cn(
-                "text-gray-100 text-base font-bold opacity-70 transition duration-200 hover:underline hover:underline-offset-4 hover:opacity-80",
-                currentSectionHash === item.href &&
-                  "opacity-1 underline underline-offset-4"
-              )}
+              className="text-gray-100 text-base font-bold opacity-70 transition duration-200 hover:underline hover:underline-offset-4 hover:opacity-80"
               href={item.href}
             >
               {item.label}
