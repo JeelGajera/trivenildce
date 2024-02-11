@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Kalnia:wght@500&family=Montserrat&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Kalnia:wght@500&family=Montserrat&display=swap");
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -66,4 +66,58 @@
 }
 ::-webkit-scrollbar-thumb {
   background-color: rgb(238, 238, 238, 0.2);
+}
+
+/* Navbar.css */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 120px;
+  background: rgba(17, 20, 26, 0.5); /* Transparent black background */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 25px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+nav {
+  display: flex;
+}
+
+nav a {
+  position: relative;
+  font-size: 18px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 35px;
+  transition: color 0.3s;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(to right, #ff6b6b, #0000ff);
+  transition: width 0.3s ease;
+}
+
+nav a:hover {
+  opacity: 0.5;
+}
+
+nav a.active::after {
+  width: 100%;
 }
