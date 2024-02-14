@@ -5,7 +5,6 @@ const HeroSection = () => {
     <section
       className="hero min-h-screen mb-10"
       style={{ backgroundImage: "url(/images/HeroSection.png)" }}
-      id="home"
     >
       <div className="hero-overlay bg-opacity-65 bg-gray-950"></div>
       <div className="container flex items-center flex-wrap justify-center md:justify-between lg:justify-between w-[98%]">

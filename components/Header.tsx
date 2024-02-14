@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 import { Menu } from "lucide-react";
 import { useEffect, useState } from "react";
 
-import Drawer from "../Drawer";
+import Drawer from "./Drawer";
 
 import useDrawer from "@/hooks/useDrawer";
 import { NAV_ITEMS } from "@/lib/constants";
@@ -36,9 +36,12 @@ const Header = () => {
   return (
     <header
       className={cn(
-        "top-0 w-screen left-0 right-0 py-6 sticky transition duration-300 z-10",
-        pathName === "/" && "fixed",
-        scrollFlg && "bg-[var(--primary-dark)] shadow-lg"
+        "top-0 w-screen left-0 right-0 py-6 transition duration-300 z-10",
+        scrollFlg &&
+          pathName !== "/" &&
+          "bg-[var(--primary-dark)] shadow-lg static",
+        // without this line the static position is not working
+        pathName === "/" && "absolute"
       )}
     >
       <div className="container flex justify-between items-center">
@@ -54,13 +57,13 @@ const Header = () => {
         {/* nav items */}
         <div className="gap-x-10 hidden md:flex">
           {NAV_ITEMS.map((item, index) => (
-            <a
+            <Link
               key={item.href + item.label + index + "NAV_ITEMS_DESKTOP"}
               className="text-gray-100 text-base font-bold opacity-70 transition duration-200 hover:underline hover:underline-offset-4 hover:opacity-80"
               href={item.href}
             >
               {item.label}
-            </a>
+            </Link>
           ))}
         </div>
 

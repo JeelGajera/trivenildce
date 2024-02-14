@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 
-import Header from "@/components/sections/Header";
+import Header from "@/components/Header";
+import ReflectiveNavigator from "@/components/ReflectiveNavigator";
+
 import { actor, inter } from "@/lib/fonts";
 
 import "@/styles/globals.css";
@@ -21,6 +23,7 @@ export default function RootLayout({
         className={`${inter.variable} ${actor.variable} bg-gray-900 text-white font-inter w-screen h-screen`}
       >
         <Header />
+        <ReflectiveNavigator />
         {children}
       </body>
     </html>

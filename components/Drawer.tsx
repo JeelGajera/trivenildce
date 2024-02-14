@@ -27,14 +27,14 @@ const Drawer = () => {
           >
             <div className="flex flex-col gap-10 p-[70px] h-full justify-end">
               {NAV_ITEMS.map((item, index) => (
-                <a
+                <Link
                   href={item.href}
                   key={index + item.label + item.href + "MOBILE_DRAWER"}
                   className="text-4xl font-bold underline underline-offset-4"
                   onClick={close}
                 >
                   {item.label}
-                </a>
+                </Link>
               ))}
             </div>
           </motion.div>
