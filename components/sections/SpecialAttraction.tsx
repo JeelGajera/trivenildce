@@ -9,7 +9,7 @@ import { Button } from "../ui/button";
 // TODO: Add href to SpecialAttractionCard when event page is done
 function SpecialAttraction() {
   return (
-    <div className="container">
+    <section className="container" id="events">
       <div className="flex justify-between items-center">
         <h1 className="text-2xl md:text-3xl">Special Attraction</h1>
         <Link href="/events">
@@ -45,7 +45,7 @@ function SpecialAttraction() {
           </Button>
         </Link>
       </div>
-    </div>
+    </section>
   );
 }
 

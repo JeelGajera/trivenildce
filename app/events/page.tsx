@@ -1,5 +1,5 @@
 import { PageProps } from "@/.next/types/app/events/page";
-import EventCard from "@/components/sections/EventCard";
+import EventCard from "@/components/EventCard";
 import DomainsFilter from "@/components/sections/events/DomainsFilter";
 
 import { reader } from "@/lib/reader";
