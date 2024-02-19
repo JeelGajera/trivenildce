@@ -43,6 +43,7 @@ const ReflectiveNavigator = () => {
   }, []);
   const pathName = usePathname();
   if (pathName !== "/") return null;
+  if (pathName.startsWith("/keystatic")) return;
   return (
     <div
       className={cn(
