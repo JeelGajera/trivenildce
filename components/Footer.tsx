@@ -3,16 +3,16 @@ import {
   MAIN_PAGE_REFLECTIVE_NAV_LINKS,
 } from "@/lib/constants";
 import { Button } from "./ui/button";
-import { bellefair } from "@/lib/fonts";
+import { actor, bellefair } from "@/lib/fonts";
 
 const Footer = () => {
   return (
-    <div className="bg-[0c0c0c] text-white py-[100px] flex flex-col md:flex-row  md:gap-y-0 gap-y-[40px] container">
+    <div className="bg-[0c0c0c] text-white py-[100px] flex flex-col md:flex-row  md:gap-y-0 gap-y-[40px] container overflow-hidden">
       {/* left side */}
       <div className="w-full h-full flex items-center justify-center flex-col">
         <div>
-          <h1 className="gradient_text text-[60px]">Step on the journey</h1>
-          <div className="flex gap-x-8 mt-8 w-full">
+          <h1 className="gradient_text">Step on the journey</h1>
+          <div className={`flex gap-x-8 mt-8 w-full ${actor.className}`}>
             <Button
               variant="outline"
               className="bg-transparent text-white px-8 py-6"
@@ -21,7 +21,7 @@ const Footer = () => {
             </Button>
             <Button
               variant="secondary"
-              className="bg-[var(--primary-blue)] text-white px-8 py-6"
+              className="bg-[var(--primary-blue)] text-white px-8 py-6 hover:bg-[var(--primary-blue-hovered)]"
             >
               Sign up
             </Button>
