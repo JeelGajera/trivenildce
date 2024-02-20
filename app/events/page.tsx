@@ -1,5 +1,6 @@
 import { PageProps } from "@/.next/types/app/events/page";
 import EventCard from "@/components/EventCard";
+import DepFilter from "@/components/sections/events/DepFilter";
 import DomainsFilter from "@/components/sections/events/DomainsFilter";
 
 import { reader } from "@/lib/reader";
@@ -60,8 +61,13 @@ const fakeEvents = [
 async function AllEvents({ searchParams: sp }: PageProps) {
   const eventsPromise = reader.collections.events.all();
   const domainsPromise = reader.collections.domains.all();
+  const departmentsPromise = reader.collections.departments.all();
 
-  const [events, domains] = await Promise.all([eventsPromise, domainsPromise]);
+  const [events, domains, departments] = await Promise.all([
+    eventsPromise,
+    domainsPromise,
+    departmentsPromise,
+  ]);
 
   const searchParams = new URLSearchParams(sp);
 
@@ -71,9 +77,19 @@ async function AllEvents({ searchParams: sp }: PageProps) {
         Experience the Extraordinary: Triveni <br />
         2k24 Events that Transcend Imagination!
       </h1>
-      <DomainsFilter domains={domains} />
+
+      <div className="flex justify-between">
+        <DomainsFilter domains={domains} />
+        <DepFilter departments={departments} />
+      </div>
+
       <Suspense key={searchParams.get("q")} fallback="Loading...">
-        <Events query={searchParams.get("q")} events={events} />
+        <Events
+          query={searchParams.get("q")}
+          departmentQuery={searchParams.get("d")}
+          departments={departments}
+          events={events}
+        />
       </Suspense>
     </div>
   );
@@ -88,6 +104,8 @@ async function sleep(ms: number) {
 async function Events({
   query,
   events,
+  departmentQuery,
+  departments,
 }: {
   query: string | null;
   events: {
@@ -104,15 +122,29 @@ async function Events({
       entryType: readonly ("solo" | "team")[];
       prize: string;
       domain: string | null;
+      department: string | null;
+    };
+  }[];
+  departmentQuery: string | null;
+  departments: {
+    slug: string;
+    entry: {
+      name: string;
     };
   }[];
 }) {
   if (query) events = events.filter((event) => event.entry.domain === query);
 
+  if (departmentQuery) {
+    events = events.filter((event) =>
+      departmentQuery.split(",").includes(event.entry.department || "")
+    );
+  }
+
   if (events.length < 1)
     return (
       <div className="text-center text-2xl">
-        No events found. Try Changing the Event domain.
+        No events found. Try Changing the filters.
       </div>
     );
 

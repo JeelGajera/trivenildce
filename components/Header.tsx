@@ -33,6 +33,10 @@ const Header = () => {
     };
   }, []);
 
+  if (pathName.startsWith("/keystatic")) {
+    return;
+  }
+
   return (
     <header
       className={cn(
@@ -66,10 +70,6 @@ const Header = () => {
             </Link>
           ))}
         </div>
-
-        <button className="bg-[var(--primary-blue)] btn-md btn hover:bg-[var(--primary-blue-hovered)] text-gray-100 hidden md:block">
-          Sign in
-        </button>
 
         {/* hamburger menu */}
         <button
