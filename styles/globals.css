@@ -78,6 +78,7 @@
   background-color: rgb(238, 238, 238, 0.2);
 }
 
+/* reflective nav links */
 .home__reflective_anchor {
   color: #18272f;
   position: relative;
@@ -106,4 +107,33 @@
 .home__reflective_anchor:hover::before {
   transform-origin: left;
   transform: scaleX(1);
+}
+
+/* footer gradient text */
+
+.gradient_text {
+  font-size: 6rem;
+  font-weight: 100;
+  letter-spacing: 2px;
+  text-align: center;
+  color: #f35626;
+  background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: opacity_animation 10s infinite linear;
+  animation: opacity_animation 10s infinite linear;
+  user-select: none;
+
+  font-weight: bold;
+  font-size: 60px;
+  font-family: var(--font-actor);
+}
+@keyframes opacity_animation {
+  from {
+    -webkit-filter: hue-rotate(0deg);
+  }
+  to {
+    -webkit-filter: hue-rotate(-360deg);
+  }
 }

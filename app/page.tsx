@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import AboutUsSection from "@/components/sections/AboutUsSection";
 import HeroSection from "@/components/sections/HeroSection";
 import SectionBanner from "@/components/sections/SectionBanner";
