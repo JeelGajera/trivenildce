@@ -53,9 +53,9 @@ const ReflectiveNavigator = () => {
     >
       <div
         className={cn(
-          "bg-yellow-400 rounded-full p-1 transition-all duration-300 ease-in-out overflow-hidden h-[10px] w-[10px]",
+          "bg-yellow-400 rounded-full p-1 transition-all duration-300 ease-in-out overflow-hidden h-[10px] w-[10px] opacity-0",
           scrollObs &&
-            "w-[400px] h-auto p-4 shadow-md border-[3px] border-yellow-500"
+            "w-[400px] h-auto p-4 shadow-md border-[3px] border-yellow-500 opacity-100"
         )}
       >
         {scrollObs ? (

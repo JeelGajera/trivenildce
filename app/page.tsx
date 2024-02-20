@@ -14,8 +14,6 @@ export default function Home() {
       <AboutUsSection />
       {/* section banner */}
       <SectionBanner />
-      {/* footer */}
-      <Footer />
     </main>
   );
 }

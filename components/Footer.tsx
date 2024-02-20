@@ -9,7 +9,7 @@ const Footer = () => {
   return (
     <footer
       id="contact"
-      className="bg-[0c0c0c] text-white py-[100px] flex flex-col md:flex-row  md:gap-y-0 gap-y-[40px] container overflow-hidden"
+      className="bg-[0c0c0c] text-white flex flex-col md:flex-row  md:gap-y-0 gap-y-[40px] container overflow-hidden"
     >
       {/* left side */}
       <div className="w-full h-full flex items-center justify-center flex-col">

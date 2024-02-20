@@ -6,6 +6,7 @@ import ReflectiveNavigator from "@/components/ReflectiveNavigator";
 import { actor, inter } from "@/lib/fonts";
 
 import "@/styles/globals.css";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Triveni LDEC",
@@ -25,6 +26,7 @@ export default function RootLayout({
         <Header />
         <ReflectiveNavigator />
         {children}
+        <Footer />
       </body>
     </html>
   );
