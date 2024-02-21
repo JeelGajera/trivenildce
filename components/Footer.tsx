@@ -7,6 +7,7 @@ import {
 import { Button } from "./ui/button";
 import { actor, bellefair } from "@/lib/fonts";
 import { usePathname } from "next/navigation";
+import GradientText from "./GradientText";
 
 const Footer = () => {
   const pathName = usePathname();
@@ -17,38 +18,22 @@ const Footer = () => {
   return (
     <footer
       id="contact"
-      className="bg-[0c0c0c] text-white flex flex-col md:flex-row  md:gap-y-0 gap-y-[40px] container overflow-hidden"
+      className="text-white flex flex-col md:flex-row md:gap-y-0 gap-y-[40px] container overflow-hidden py-20"
     >
       {/* left side */}
       <div className="w-full h-full flex items-center justify-center flex-col">
-        <div>
-          <h1 className="gradient_text">Step on the journey</h1>
-          <div className={`flex gap-x-8 mt-8 w-full ${actor.className}`}>
-            <Button
-              variant="outline"
-              className="bg-transparent text-white px-8 py-6"
-            >
-              Login
-            </Button>
-            <Button
-              variant="secondary"
-              className="bg-[var(--primary-blue)] text-white px-8 py-6 hover:bg-[var(--primary-blue-hovered)]"
-            >
-              Sign up
-            </Button>
-          </div>
+        <div className="flex">
+          <GradientText />
         </div>
       </div>
       {/* right side */}
-      <div
-        className={`w-full h-full flex items-center flex-wrap justify-center  ${bellefair.className} text-white `}
-      >
+      <div className="w-full h-full flex items-center flex-wrap justify-center text-white">
         <div className="w-full md:w-[70%]">
           {/* row 1 */}
           <div className="flex flex-wrap justify-between">
             {/* col 1 */}
             <div className="flex flex-col items-start">
-              <h1 className="text-xl my-6">Sitemap</h1>
+              <h1 className="text-xl mb-3 font-bold">Sitemap</h1>
               {MAIN_PAGE_REFLECTIVE_NAV_LINKS.map((item, index) => (
                 <a
                   href={item.href}
@@ -61,7 +46,7 @@ const Footer = () => {
             </div>
             {/* col 2 */}
             <div className="flex flex-col items-start w-[40%]">
-              <h1 className="text-xl my-6">Address</h1>
+              <h1 className="text-xl mb-3 font-bold">Address</h1>
               <a
                 className="hover:opacity-70 transition duration-300 hover:underline underline-offset-2"
                 href="https://maps.app.goo.gl/G4RwmB7escd9Smnn8"
@@ -72,10 +57,10 @@ const Footer = () => {
             </div>
           </div>
           {/* row 2 */}
-          <div className="flex flex-wrap justify-between mt-10">
+          <div className="flex flex-wrap justify-between mt-5">
             {/* col 1 */}
             <div className="flex flex-col">
-              <h1 className="text-xl my-6">Follow us on</h1>
+              <h1 className="text-xl mb-3 font-bold">Follow us on</h1>
               <div className="flex flex-wrap gap-x-8">
                 {FOOTER_SOCIALS.map((item, index) => (
                   <a
@@ -94,7 +79,7 @@ const Footer = () => {
             </div>
             {/* col 2 */}
             <div className="flex flex-col w-[40%]">
-              <h1 className="text-xl my-6">Contact</h1>
+              <h1 className="text-xl mb-3 font-bold">Contact</h1>
               <a
                 href="mailto:help@gmail.com"
                 className="hover:opacity-70 transition duration-300 hover:underline underline-offset-2"
