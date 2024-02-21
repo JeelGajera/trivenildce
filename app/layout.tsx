@@ -7,6 +7,8 @@ import { actor, inter } from "@/lib/fonts";
 
 import "@/styles/globals.css";
 import Footer from "@/components/Footer";
+import Script from "next/script";
+import AEScript from "@/components/AEScript";
 
 export const metadata: Metadata = {
   title: "Triveni LDEC",
@@ -21,8 +23,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${actor.variable} bg-gray-900 text-white font-inter w-screen h-screen`}
+        className={`${inter.variable} ${actor.variable} bg-gray-900 text-white font-inter w-screen h-full`}
       >
+        <AEScript />
         <Header />
         <ReflectiveNavigator />
         {children}

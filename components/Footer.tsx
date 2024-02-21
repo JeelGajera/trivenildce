@@ -1,11 +1,19 @@
+"use client";
+
 import {
   FOOTER_SOCIALS,
   MAIN_PAGE_REFLECTIVE_NAV_LINKS,
 } from "@/lib/constants";
 import { Button } from "./ui/button";
 import { actor, bellefair } from "@/lib/fonts";
+import { usePathname } from "next/navigation";
 
 const Footer = () => {
+  const pathName = usePathname();
+
+  if (pathName.startsWith("/keystatic")) {
+    return;
+  }
   return (
     <footer
       id="contact"
