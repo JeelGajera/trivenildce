@@ -80,7 +80,7 @@
 
 /* reflective nav links */
 .home__reflective_anchor {
-  color: #18272f;
+  color: #fff;
   position: relative;
   text-decoration: none;
 }
@@ -91,7 +91,7 @@
   width: 100%;
   height: 4px;
   border-radius: 4px;
-  background-color: #18272f;
+  background-color: #F97316;
   bottom: 0;
   left: 0;
   transform-origin: right;

@@ -9,7 +9,6 @@ export default function Home() {
     <main className="overflow-x-hidden">
       <HeroSection />
       <SpecialAttraction />
-
       {/* about us section */}
       <AboutUsSection />
       {/* section banner */}
