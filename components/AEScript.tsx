@@ -1,21 +1,25 @@
 "use client";
-import React, { useEffect } from "react";
+
+import { usePathname } from "next/navigation";
+import { useEffect } from "react";
 
 type Props = {};
 
 function AEScript({}: Props) {
+  const pathName = usePathname();
+
   useEffect(() => {
-    const jQ = document.createElement("script");
-    jQ.src = "https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js";
-    document.body.appendChild(jQ);
-    const AE = document.createElement("script");
-    AE.src = "https://allevents.in/scripts/public/ae-plugin-lib-button.js";
-    document.body.appendChild(AE);
-    return () => {
-      document.body.removeChild(jQ);
-      document.body.removeChild(AE);
+    const script = document.createElement("script");
+    script.src = "/ae.js";
+    document.body.appendChild(script);
+    script.onload = () => {
+      console.log("Script loaded");
     };
-  });
+
+    return () => {
+      script.remove();
+    };
+  }, [pathName]);
   return null;
 }
 

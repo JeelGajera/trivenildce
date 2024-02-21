@@ -1,8 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
+import EventCard from "@/components/EventCard";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
 import { reader } from "@/lib/reader";
-import { getDepartmentFromSlug, getDomainFromSlug } from "@/lib/utils";
+import { cn, getDepartmentFromSlug, getDomainFromSlug } from "@/lib/utils";
 import { DocumentRenderer } from "@keystatic/core/renderer";
 import { ArrowRight } from "lucide-react";
 import React from "react";
@@ -14,9 +15,16 @@ type Props = {
 };
 
 async function Page({ params }: Props) {
-  const event = await reader.collections.events.read(params.slug, {
+  const eventPromise = reader.collections.events.read(params.slug, {
     resolveLinkedFiles: true,
   });
+
+  const allEventsPromise = reader.collections.events.all();
+
+  const [event, allEvents] = await Promise.all([
+    eventPromise,
+    allEventsPromise,
+  ]);
 
   if (!event) {
     return <div>Event not found</div>;
@@ -45,9 +53,13 @@ async function Page({ params }: Props) {
           <div>Domain : {getDomainFromSlug(event.domain || "")}</div>
           <div>Department: {getDepartmentFromSlug(event.department || "")}</div>
           <div className="mt-2">
-            <Button dataEventID="80001361265782" dataTicketId={event.AE_id}>
+            <button
+              data-event-id="80001361265782"
+              data-ticket-id={event.AE_id}
+              className={buttonVariants({ className: "ae-ticket-book-button" })}
+            >
               Enroll Now <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
+            </button>
           </div>
         </div>
       </div>
@@ -150,6 +162,33 @@ async function Page({ params }: Props) {
               </React.Fragment>
             );
           })}
+        </div>
+      </div>
+
+      <div className="mt-5 space-y-3">
+        <p className="text-2xl font-bold">More Events : </p>
+        <div className="grid grid-cols-1 md:grid-cols-3">
+          {allEvents
+            .filter((allEvent) => {
+              return (
+                allEvent.entry.department === event.department &&
+                allEvent.slug !== params.slug
+              );
+            })
+            .map((allEvent) => {
+              return (
+                <EventCard
+                  badges={allEvent.entry.entryType}
+                  href={`/events/${allEvent.slug}`}
+                  imageUrl={
+                    `https://wsrv.nl/?url=raw.githubusercontent.com/mdhruvil/triveni/main/content/events/${allEvent.slug}/${allEvent.entry.eventImg}&h=300` ??
+                    ""
+                  }
+                  title={allEvent.entry.name}
+                  key={allEvent.slug}
+                />
+              );
+            })}
         </div>
       </div>
     </div>
