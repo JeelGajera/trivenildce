@@ -64,7 +64,6 @@ async function Page({ params }: Props) {
         </div>
       </div>
       <div className="mt-5 bg-gray-700/60 p-3 rounded-lg">
-        <span className="font-bold text-2xl mb-3">Description :</span>
         <DocumentRenderer
           document={event.description}
           renderers={{
@@ -73,26 +72,35 @@ async function Page({ params }: Props) {
                 switch (level) {
                   case 1:
                     return (
-                      <h1 className="text-2xl font-actor" style={{ textAlign }}>
+                      <h1
+                        className="text-2xl mt-5 font-bold"
+                        style={{ textAlign }}
+                      >
                         {children}
                       </h1>
                     );
                   case 2:
                     return (
-                      <h2 className="text-xl font-actor" style={{ textAlign }}>
+                      <h2
+                        className="text-xl mt-3 font-bold"
+                        style={{ textAlign }}
+                      >
                         {children}
                       </h2>
                     );
                   case 3:
                     return (
-                      <h3 className="text-lg font-actor" style={{ textAlign }}>
+                      <h3
+                        className="text-lg mt-1 font-bold"
+                        style={{ textAlign }}
+                      >
                         {children}
                       </h3>
                     );
                   case 4:
                     return (
                       <h4
-                        className="text-base font-actor"
+                        className="text-base mt-3 font-bold"
                         style={{ textAlign }}
                       >
                         {children}
@@ -100,13 +108,19 @@ async function Page({ params }: Props) {
                     );
                   case 5:
                     return (
-                      <h5 className="text-sm font-actor" style={{ textAlign }}>
+                      <h5
+                        className="text-sm mt-3 font-bold"
+                        style={{ textAlign }}
+                      >
                         {children}
                       </h5>
                     );
                   default:
                     return (
-                      <h6 className="text-xs font-actor" style={{ textAlign }}>
+                      <h6
+                        className="text-xs mt-3 font-bold"
+                        style={{ textAlign }}
+                      >
                         {children}
                       </h6>
                     );
@@ -167,7 +181,7 @@ async function Page({ params }: Props) {
 
       <div className="mt-5 space-y-3">
         <p className="text-2xl font-bold">More Events : </p>
-        <div className="grid grid-cols-1 md:grid-cols-3">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
           {allEvents
             .filter((allEvent) => {
               return (
@@ -175,6 +189,7 @@ async function Page({ params }: Props) {
                 allEvent.slug !== params.slug
               );
             })
+            .slice(0, 3)
             .map((allEvent) => {
               return (
                 <EventCard
