@@ -75,6 +75,13 @@ export default config({
           label: "Domain",
           collection: "domains",
         }),
+        department: fields.relationship({
+          label: "Department",
+          collection: "departments",
+        }),
+        AE_id: fields.text({
+          label: "AllEvents ID",
+        }),
       },
     }),
     domains: collection({
@@ -85,6 +92,18 @@ export default config({
         name: fields.slug({
           name: {
             label: "Event Name",
+          },
+        }),
+      },
+    }),
+    departments: collection({
+      label: "Departments",
+      slugField: "name",
+      path: "content/departments/*",
+      schema: {
+        name: fields.slug({
+          name: {
+            label: "Department Name",
           },
         }),
       },

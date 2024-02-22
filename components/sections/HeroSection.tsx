@@ -1,4 +1,6 @@
 import Image from "next/image";
+import { Button } from "../ui/button";
+import { ArrowRight } from "lucide-react";
 
 const HeroSection = () => {
   return (
@@ -16,24 +18,10 @@ const HeroSection = () => {
             Triveni 2k24 - Embark on the journey on InnoCulture
           </h1>
           <div className="buttons mt-10 w-[100%]">
-            <button
-              className="p-3 mr-5 inline-flex items-center justify-center opacity-90 hover:opacity-100 w-[20sem] sm:w[5em] hover:rounded-md transition duration-200"
-              style={{ backgroundColor: "blue", fontWeight: "500" }}
-            >
-              <span className="mr-3">View All Events</span>
-              <Image
-                src="/images/Up_RIght_Icon.png"
-                alt="icon"
-                height={10}
-                width={10}
-              />
-            </button>
-            <button
-              className="p-3 hover:border-blue-200 opacity-90 hover:opacity-100 w-[5em] lg:w-[7em] mt-5 hover:rounded-md transition duration-200"
-              style={{ border: "1px solid white" }}
-            >
-              Gallery
-            </button>
+            <Button size="lg">
+              View All Events
+              <ArrowRight className="ml-2 w-4 h-4" />
+            </Button>
           </div>
         </div>
         <div className="side-image mt-12 lg:mb-24 lg:mt-0 mb-0 justify-center">
