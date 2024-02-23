@@ -1,9 +1,4 @@
-"use client";
-import React from "react";
-
-type Props = {};
-
-function GradientText({}: Props) {
+function GradientText() {
   return (
     <div className="text-5xl md:text-7xl font-actor text-center leading-none select-none tracking-tightest font-extrabold md:flex  md:justify-center md:items-center">
       <span

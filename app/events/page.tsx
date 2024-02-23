@@ -78,7 +78,7 @@ async function AllEvents({ searchParams: sp }: PageProps) {
         2k24 Events that Transcend Imagination!
       </h1>
 
-      <div className="flex justify-between">
+      <div className="flex justify-between items-center overflow-scroll gap-2">
         <DomainsFilter domains={domains} />
         <DepFilter departments={departments} />
       </div>

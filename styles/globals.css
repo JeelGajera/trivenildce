@@ -3,6 +3,7 @@
 @tailwind utilities;
 @import url("https://fonts.googleapis.com/css2?family=Kalnia:wght@500&family=Montserrat&display=swap");
 
+
 :root {
   --primary-blue: #0303e9;
   --primary-blue-hovered: #0303ff;
@@ -91,7 +92,7 @@
   width: 100%;
   height: 4px;
   border-radius: 4px;
-  background-color: #F97316;
+  background-color: #f97316;
   bottom: 0;
   left: 0;
   transform-origin: right;

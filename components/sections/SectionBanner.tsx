@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const SectionBanner = () => {
   return (
-    <section className="mb-30 overflow-hidden select-none">
+    <section className="mb-30 overflow-hidden select-none" id="sponsors">
       <div className="relative h-[600px] w-screen">
         <Image
           src="/images/sectionBanner.png"
@@ -16,6 +16,7 @@ const SectionBanner = () => {
             Embark on the Journey of <br /> Diversity and Creativity!
           </h1>
         </div>
+        {/* TODO add sponsors section */}
       </div>
     </section>
   );
