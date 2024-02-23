@@ -11,30 +11,34 @@ export const NAV_ITEMS = [
   },
   {
     label: "About",
-    href: "/about",
+    href: "",
   },
   {
     label: "Contact",
     href: "/contact",
+  },
+  {
+    label: "Sponsors",
+    href: "",
   },
 ];
 
 export const MAIN_PAGE_REFLECTIVE_NAV_LINKS = [
   {
     label: "Home",
-    href: "#",
+    href: "/",
   },
   {
     label: "Events",
-    href: "#events",
+    href: "/events",
   },
   {
     label: "About",
-    href: "#about",
+    href: "",
   },
   {
-    label: "Sponsors",
-    href: "#sponsors",
+    label: "Contact",
+    href: "/contact",
   },
 ];
 

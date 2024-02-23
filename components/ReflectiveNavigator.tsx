@@ -10,26 +10,27 @@ const ReflectiveNavigator = () => {
   const [scrollObs, setScrollObs] = useState(false);
   const [activeNavItem, setActiveNavItem] = useState<string | null>(null);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const sections = document.querySelectorAll("section");
-      sections.forEach((sec) => {
-        const top = window.scrollY;
-        const offset = sec.offsetTop - 50;
-        const height = sec.offsetHeight;
-        const id = sec.getAttribute("id");
-        if (top >= offset && top < offset + height) {
-          setActiveNavItem(id);
-        }
-      });
-    };
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const sections = document.querySelectorAll("section");
+  //     sections.forEach((sec) => {
+  //       const top = window.scrollY;
+  //       const offset = sec.offsetTop - 50;
+  //       const height = sec.offsetHeight;
+  //       const id = sec.getAttribute("id");
+  //       if (top >= offset && top < offset + height) {
+  //         setActiveNavItem(id);
+  //       }
+  //     });
+  //   };
 
-    window.addEventListener("scroll", handleScroll);
+  //   window.addEventListener("scroll", handleScroll);
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, []);
+
   useEffect(() => {
     function handleScroll() {
       if (window.scrollY > 300) {
@@ -42,12 +43,11 @@ const ReflectiveNavigator = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
   const pathName = usePathname();
-  if (pathName !== "/") return null;
   if (pathName.startsWith("/keystatic")) return;
   return (
     <div
       className={cn(
-        "w-screen fixed top-[15%] z-[9] flex justify-center transition-all duration-300",
+        "w-screen fixed top-[15%] z-50 flex justify-center transition-all duration-300",
         scrollObs && "top-[3%]"
       )}
     >

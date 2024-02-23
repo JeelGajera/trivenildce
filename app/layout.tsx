@@ -10,10 +10,11 @@ import { Toaster } from "@/components/ui/toaster";
 import { actor, inter } from "@/lib/fonts";
 
 import "@/styles/globals.css";
+import Head from "next/head";
 
 export const metadata: Metadata = {
-  title: "Triveni LDEC",
-  description: "L.D. College of engineering Triveni club",
+  title: "Triveni 2K24 - Embark On The Journey of Inno-Culture ✨",
+  description: "Experience the essence of Triveni Annual Fest 2023, where education meets innovation. Join us in celebrating excellence in technical education and research, shaping responsible citizens and competent professionals for a sustainable future.",
 };
 
 export default function RootLayout({
@@ -24,9 +25,12 @@ export default function RootLayout({
   return (
     <html lang="en" className="overflow-x-hidden">
       <Script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></Script>
+      <Head>
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+      </Head>
 
       <body
-        className={`${inter.variable} ${actor.variable} bg-gray-900 text-white font-inter w-screen h-full`}
+        className={`${inter.variable} ${actor.variable} overflow-hidden bg-gray-900 text-white font-inter w-screen h-full`}
       >
         <AEScript />
         <Header />

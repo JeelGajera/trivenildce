@@ -1,4 +1,6 @@
 "use client";
+
+import axios from 'axios';
 import { useForm, Controller } from "react-hook-form";
 
 import { useToast } from "@/components/ui/use-toast";
@@ -12,6 +14,7 @@ type FormSchema = {
 };
 const ContactPage = () => {
   const { toast } = useToast();
+
   const { handleSubmit, control } = useForm<FormSchema>({
     defaultValues: {
       name: "",
@@ -19,6 +22,7 @@ const ContactPage = () => {
       message: "",
     },
   });
+
   function onSubmit(data: FormSchema) {
     function callToast(msg: string) {
       toast({
@@ -32,16 +36,35 @@ const ContactPage = () => {
     else if (data.email.match(/\S+@\S+\.\S+/) === null)
       callToast("Please enter a valid email");
     else {
-      // handle api call
-      toast({
-        title: `Message sent! by ${data.name}`,
-      });
+      const sendData = async () => {
+        try {
+          const response = await axios.post('https://api.emailjs.com/api/v1.0/email/send', {
+            service_id: process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+            template_id: process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+            user_id: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY,
+            template_params: {
+              name: data.name,
+              message: data.message,
+              email: data.email
+            }
+          });
+          console.log(response.data);
+          toast({
+            title: `Hey ${data.name}, We receive your latter. We'll reach you soon.`, 
+          });
+        } catch (error: any) {
+          console.error('Oops...', error);
+          callToast("Oops..."+error.message);
+        }
+      };
+      sendData();
     }
   }
   return (
-    <div className="h-screen container mx-auto">
+    <div className="container mx-auto">
+      <h1 className="text-3xl font-bold mb-12">Together, Let's Create Memories: <span className="text-teal-500">Contact Us!</span></h1>
       {/* form container */}
-      <form className="form__contact" onSubmit={handleSubmit(onSubmit)}>
+      <form className="relative form__contact min-w-fit z-0" onSubmit={handleSubmit(onSubmit)}>
         <fieldset>
           <p>Hey, Stranger!</p>
           <p>
