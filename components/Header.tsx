@@ -43,7 +43,7 @@ const Header = () => {
         "top-0 w-screen left-0 right-0 py-6 transition duration-300 z-10",
         scrollFlg &&
           pathName !== "/" &&
-          "bg-[var(--primary-dark)] shadow-lg static",
+          "shadow-lg static",
         // without this line the static position is not working
         pathName === "/" && "absolute"
       )}
@@ -63,7 +63,7 @@ const Header = () => {
           {NAV_ITEMS.map((item, index) => (
             <Link
               key={item.href + item.label + index + "NAV_ITEMS_DESKTOP"}
-              className="text-gray-100 text-base font-bold opacity-70 transition duration-200 hover:underline hover:underline-offset-4 hover:opacity-80"
+              className="text-white text-base font-bold opacity-70 transition duration-200 hover:underline hover:underline-offset-4 hover:opacity-80 bg-white bg-opacity-25 backdrop-blur-md px-2 py-1 rounded-full border-[1px] border-primary"
               href={item.href}
             >
               {item.label}

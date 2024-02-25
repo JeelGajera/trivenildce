@@ -8,7 +8,7 @@ const AboutUsSection = () => {
     >
       {/* left part */}
       <div className="w-full md:w-1/2">
-        <h1 className="text-6xl font-bold my-10 md:my-0 font-actor">
+        <h1 className="text-6xl font-bold my-10 md:my-0 font-actor text_shadow_red animate-glitch_wave">
           About Us
         </h1>
         <div className="my-[30px]">

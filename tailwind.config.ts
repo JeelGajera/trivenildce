@@ -70,23 +70,40 @@ const config = {
           "100%": { transform: "rotate(0.0deg)" },
         },
         glitch: {
-          "0%" : {
+          "0%": {
             transform: "none",
             filter: "invert(0.1)",
           },
-          "25%" : {
+          "25%": {
             filter: "invert(0)",
           },
-          "50%" : {
+          "50%": {
             filter: "invert(0.2)",
           },
-          "75%" : {
+          "75%": {
             filter: "invert(0)",
           },
-          "100%" : {
+          "100%": {
             transform: "none",
             filter: "invert(0.1)",
-          }
+          },
+        },
+        glitch_wave: {
+          "0%":{
+            transform: "none",
+          },
+          "25%": {
+            transform: "translate(-5px, 5px)",
+          },
+          "50%": {
+            transform: "translate(5px, -5px)",
+          },
+          "75%": {
+            transform: "translate(-5px, 5px)",
+          },
+          "100%": {
+            transform: "none",
+          },
         },
         "accordion-down": {
           from: { height: "0" },
@@ -166,6 +183,8 @@ const config = {
         spinSlow: "spin 5.3s linear infinite",
         wave: "wave 10.6s infinite",
         glitch: "glitch 1s infinite",
+        glitch_wave: "glitch_wave 8s ease-in-out infinite",
+        glitch_wave_fast: "glitch_wave 1s ease-in-out infinite",
       },
       gradientColorStops: {
         "gradient-1-start": "#007CF0",
@@ -179,9 +198,10 @@ const config = {
     fontFamily: {
       inter: "var(--font-inter)",
       actor: "var(--font-actor)",
+      clourso: ["Clourso", "sans-serif"]
     },
   },
   plugins: [require("tailwindcss-animate"), require("daisyui")],
-} satisfies Config;
+}
 
 export default config;
