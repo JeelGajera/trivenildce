@@ -7,6 +7,7 @@ import { cn, getDepartmentFromSlug, getDomainFromSlug } from "@/lib/utils";
 import { DocumentRenderer } from "@keystatic/core/renderer";
 import { ArrowRight } from "lucide-react";
 import React from "react";
+import Image from "next/image";
 
 type Props = {
   params: {
@@ -51,7 +52,7 @@ async function Page({ params }: Props) {
             ))}
           </div>
           <div>Domain : {getDomainFromSlug(event.domain || "")}</div>
-          <div>Department: {getDepartmentFromSlug(event.department || "")}</div>
+          {/* <div>Department: {getDepartmentFromSlug(event.department || "")}</div> */}
           <div className="mt-2">
             <button
               data-event-id="80001361265782"
@@ -165,17 +166,22 @@ async function Page({ params }: Props) {
             <span>{event.eventDateAndTime.time}</span>
           </div>
         </div>
-        <div className="p-3 bg-gray-700/60 rounded-lg">
-          <span className="font-bold text-lg">Prize:</span>
-          <br />
-          {event.prize.split("\n").map((line) => {
-            return (
-              <React.Fragment key={line}>
-                {line}
-                <br />
-              </React.Fragment>
-            );
-          })}
+        <div className="p-3 bg-gray-700/60 rounded-lg flex justify-between">
+          <div>
+            <span className="font-bold text-lg">Prize:</span>
+            <br />
+            {event.prize.split("\n").map((line) => {
+              return (
+                <React.Fragment key={line}>
+                  {line}
+                  <br />
+                </React.Fragment>
+              );
+            })}
+          </div>
+          <div className="">
+            <Image src="/images/prize.png" alt="prize" width={100} height={100} />
+          </div>
         </div>
       </div>
 

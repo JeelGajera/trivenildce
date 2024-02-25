@@ -6,12 +6,14 @@ import { ArrowRightIcon } from "@radix-ui/react-icons";
 
 import { Button } from "../ui/button";
 
-// TODO: Add href to SpecialAttractionCard when event page is done
+
 function SpecialAttraction() {
   return (
-    <section className="container" id="events">
+    <section className="container mb-12" id="events">
       <div className="flex justify-between items-center">
-        <h1 className="text-2xl md:text-3xl">Special Attraction</h1>
+      <h1 className="text-6xl font-bold my-10 md:my-0 font-actor text_shadow_teal animate-glitch">
+      Special Attraction
+        </h1>
         <Link href="/events">
           <Button
             variant="link"
@@ -24,17 +26,18 @@ function SpecialAttraction() {
       </div>
       <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-5 md:mt-7">
         <SpecialAttractionCard
-          imageUrl="/images/standup.jpg"
-          title="Standup Comedy"
+          imageUrl="https://wsrv.nl/?url=raw.githubusercontent.com/mdhruvil/triveni/main/content/events/ctf-competition/eventImg.jpg&h=400"
+          title="Capture The Flag"
+          href="/events/ctf-competition"
         />
         <SpecialAttractionCard
           imageUrl="/images/dronerace.webp"
-          title="Drone Race"
+          title="MUN"
         />
         <SpecialAttractionCard
           imageUrl="/images/ldtalks.jpg"
           wFull
-          title="LD Talks"
+          title="Cultural Night"
         />
       </div>
       <div className="flex justify-center mt-5 md:hidden">

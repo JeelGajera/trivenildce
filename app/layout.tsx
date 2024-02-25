@@ -30,7 +30,7 @@ export default function RootLayout({
       </Head>
 
       <body
-        className={`${inter.variable} ${actor.variable} overflow-hidden bg-gray-900 text-white font-inter w-screen h-full`}
+        className={`${inter.variable} ${actor.variable} overflow-hidden bg-black text-white font-inter w-screen h-full`}
       >
         <AEScript />
         <Header />

@@ -8,10 +8,19 @@ export default function Home() {
     <main className="overflow-x-hidden">
       <HeroSection />
       <SpecialAttraction />
-      {/* about us section */}
-      <AboutUsSection />
       {/* section banner */}
       <SectionBanner />
+      {/* about us section */}
+      <p className="tracking-wide animate-glitch horizontal_tabline">
+      Triveni-2K24, Triveni-2K24, Triveni-2K24, Triveni-2K24, Triveni-2K24, Triveni-2K24, Triveni-2K24, Triveni-2K24, Triveni-2K24, 
+      </p>
+      <AboutUsSection />
+
+      <div className="marquee mb-[10vh]">
+        <p className="text-xl sm:text-6xl font-bold my-10 md:my-0 text_shadow_teal animate-glitch_wave font-inter">
+        Triveni 2K24: Where Rivers of Talent Merge! March 21<sup>th</sup>, 22<sup>th</sup>, 23<sup>rd</sup>.
+        </p>
+      </div>
     </main>
   );
 }

@@ -72,26 +72,31 @@ async function AllEvents({ searchParams: sp }: PageProps) {
   const searchParams = new URLSearchParams(sp);
 
   return (
-    <div className="container">
-      <h1 className="text-4xl text-center hidden md:block">
-        Experience the Extraordinary: Triveni <br />
-        2k24 Events that Transcend Imagination!
-      </h1>
+    <>
+      <div className="container">
+        <h1 className="text-4xl text-center hidden md:block font-clourso">
+          Experience the Extraordinary: <span className="text-teal-500">Triveni <br />
+            2k24</span> Events that Transcend Imagination!
+        </h1>
 
-      <div className="flex justify-between items-center overflow-scroll gap-2">
-        <DomainsFilter domains={domains} />
-        <DepFilter departments={departments} />
+        <div className="flex justify-between items-center overflow-scroll gap-2">
+          <DomainsFilter domains={domains} />
+          <DepFilter departments={departments} />
+        </div>
+
+        <Suspense key={searchParams.get("q")} fallback="Loading...">
+          <Events
+            query={searchParams.get("q")}
+            departmentQuery={searchParams.get("d")}
+            departments={departments}
+            events={events}
+          />
+        </Suspense>
       </div>
-
-      <Suspense key={searchParams.get("q")} fallback="Loading...">
-        <Events
-          query={searchParams.get("q")}
-          departmentQuery={searchParams.get("d")}
-          departments={departments}
-          events={events}
-        />
-      </Suspense>
-    </div>
+      <p className="tracking-wide animate-glitch horizontal_tabline">
+        Triveni-2K24, Triveni-2K24, Triveni-2K24, Triveni-2K24, Triveni-2K24, Triveni-2K24, Triveni-2K24, Triveni-2K24, Triveni-2K24,
+      </p>
+    </>
   );
 }
 

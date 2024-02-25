@@ -3,12 +3,19 @@
 @tailwind utilities;
 @import url("https://fonts.googleapis.com/css2?family=Kalnia:wght@500&family=Montserrat&display=swap");
 
+@font-face {
+  font-family: "Clourso";
+  src: url("/assets/Clourso.otf");
+  font-weight: 400;
+  font-style: normal;
+}
 
 :root {
   --primary-blue: #0303e9;
   --primary-blue-hovered: #0303ff;
   --primary-dark: #000025;
 }
+
 * {
   scroll-behavior: smooth;
 }
@@ -137,4 +144,55 @@
   to {
     -webkit-filter: hue-rotate(-360deg);
   }
+}
+
+.texture_bg {
+  background-image: url("/images/bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  position: relative;
+}
+
+.text_shadow_teal {
+  text-shadow: -3px 7px 0px rgba(0, 250, 255, 0.6);
+}
+
+.text_shadow_red {
+  text-shadow: -3px 7px 0px rgb(208, 70, 55);
+}
+
+.horizontal_tabline{
+  text-shadow: rgb(255, 210, 14) 0px 5px, rgb(229, 188, 8) 0px 10px, rgb(236, 132, 1) 0px 15px, rgb(230, 92, 4) 0px 20px, rgb(229, 46, 6) 0px 25px, rgb(222, 0, 107) 0px 30px, rgb(202, 3, 158) 0px 35px, rgb(162, 3, 203) 0px 40px, rgb(109, 1, 201) 0px 45px, rgb(34, 0, 143) 0px 50px, rgb(6, 47, 154) 0px 55px, rgb(0, 69, 172) 0px 60px, rgb(0, 125, 178) 0px 65px, rgb(0, 184, 217) 0px 70px;
+  font-size: 3rem;
+  margin-bottom: 10vh;
+  text-align: center;
+  font-weight: bold;
+  font-family: "Kalnia", sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.marquee {
+  width: 100%;
+  white-space: nowrap;
+  position: relative;
+  animation: marquee 12s linear infinite;
+}
+
+@media (max-width: 768px) {
+  .horizontal_tabline {
+    font-size: 2rem;
+  }
+  .marquee {
+    animation: marquee 8s linear infinite;
+  }
+}
+
+@keyframes marquee {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
 }

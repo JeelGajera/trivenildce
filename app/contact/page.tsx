@@ -62,7 +62,7 @@ const ContactPage = () => {
   }
   return (
     <div className="container mx-auto">
-      <h1 className="text-3xl font-bold mb-12">Together, Let&apos;s Create Memories: <span className="text-teal-500">Contact Us!</span></h1>
+      <h1 className="text-3xl font-bold mb-12 font-clourso"><span className='text-red-500'>Together </span>, Let&apos;s Create Memories: <span className="text-teal-500">Contact Us!</span></h1>
       {/* form container */}
       <form className="relative form__contact min-w-fit z-0" onSubmit={handleSubmit(onSubmit)}>
         <fieldset>
