@@ -3,7 +3,7 @@ import Image from "next/image";
 const AboutUsSection = () => {
   return (
     <section
-      className="container my-[100px] flex flex-col-reverse md:flex-row w-full gap-8 select-none"
+      className="container my-[100px] flex flex-col-reverse md:flex-row w-full gap-8 select-none justify-center items-center"
       id="about"
     >
       {/* left part */}
@@ -13,26 +13,19 @@ const AboutUsSection = () => {
         </h1>
         <div className="my-[30px]">
           <h4 className="text-xl font-medium text-gray-500">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
-            ratione vero laborum laboriosam a amet iste. Officia minima
-            aspernatur itaque, velit quam sapiente id deserunt officiis beatae
-            natus dolore nemo. Fuga ratione id ab obcaecati nobis ex illum, modi
-            dolore.
+            Our college fest is envisioned as a dynamic amalgamation of diverse experiences, uniting students from varied backgrounds. Beyond mere entertainment, the objective is to create an indelible and meaningful experience. The emphasis lies in celebrating diversity – where talents, ideas, and cultures harmoniously converge. This fest aims to transcend the ordinary, fostering connections, nurturing creativity, and instilling a profound sense of community spirit.
           </h4>
           <h4 className="text-xl font-medium text-gray-500 my-10">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. A esse
-            deleniti eveniet aut, quia id laborum sapiente dolore commodi minus
-            sequi molestiae exercitationem dolorem, debitis unde, nam at libero
-            culpa?
+            It aspires to be more than a fleeting celebration, seeking to establish a lasting impact by appreciating individual uniqueness and promoting a collective sense of belonging. In essence, it is a formal yet vibrant platform where the richness of our collective identity takes centre stage.
           </h4>
         </div>
       </div>
       {/* right part */}
       <div className="w-full md:w-1/2">
         <Image
-          src="/images/about_us_sec.png"
+          src="/hero/doddles.png"
           alt="About us section"
-          className="object-cover rounded-md pointer-events-none"
+          className="object-cover rounded-md pointer-events-none invert animate-glitch"
           width={800}
           height={1000}
         />

@@ -19,7 +19,7 @@ const Footer = () => {
       <hr className="text-teal-500 border-teal-500 mt-2" />
       <footer
         id="contact"
-        className="text-white container overflow-hidden pt-20 pb-5 px-2"
+        className="text-white overflow-hidden pt-20 pb-5 px-2 texture_bg"
       >
         <div className="flex flex-col sm:flex-row md:gap-y-0 gap-y-[40px]">
           {/* left side */}

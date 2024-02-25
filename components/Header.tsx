@@ -51,11 +51,11 @@ const Header = () => {
       <div className="container flex justify-between items-center">
         <Link href="/">
           <Image
-            src="/images/header_logo.png"
+            src="/hero/logo.png"
             alt="Header logo"
             height={80}
-            width={270}
-            className="pointer-events-none"
+            width={240}
+            className="w-52 sm:w-auto pointer-events-none invert"
           />
         </Link>
         {/* nav items */}

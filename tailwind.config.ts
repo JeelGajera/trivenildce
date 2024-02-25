@@ -59,6 +59,35 @@ const config = {
         sm: "calc(var(--radius) - 4px)",
       },
       keyframes: {
+        wave: {
+          "0%": { transform: "rotate(0.0deg)" },
+          "10%": { transform: "rotate(14deg)" },
+          "20%": { transform: "rotate(-8deg)" },
+          "30%": { transform: "rotate(14deg)" },
+          "40%": { transform: "rotate(-4deg)" },
+          "50%": { transform: "rotate(10.0deg)" },
+          "60%": { transform: "rotate(0.0deg)" },
+          "100%": { transform: "rotate(0.0deg)" },
+        },
+        glitch: {
+          "0%" : {
+            transform: "none",
+            filter: "invert(0.1)",
+          },
+          "25%" : {
+            filter: "invert(0)",
+          },
+          "50%" : {
+            filter: "invert(0.2)",
+          },
+          "75%" : {
+            filter: "invert(0)",
+          },
+          "100%" : {
+            transform: "none",
+            filter: "invert(0.1)",
+          }
+        },
         "accordion-down": {
           from: { height: "0" },
           to: { height: "var(--radix-accordion-content-height)" },
@@ -131,6 +160,12 @@ const config = {
         "gradient-foreground-2": "gradient-foreground-2 8s infinite",
         "gradient-background-3": "gradient-background-3 8s infinite",
         "gradient-foreground-3": "gradient-foreground-3 8s infinite",
+        pulse: "pulse 2s infinite",
+        pingSlow: "ping 4s cubic-bezier(0, 0, 0.4, 1) infinite",
+        bounce: "bounce 2.5s infinite",
+        spinSlow: "spin 5.3s linear infinite",
+        wave: "wave 10.6s infinite",
+        glitch: "glitch 1s infinite",
       },
       gradientColorStops: {
         "gradient-1-start": "#007CF0",

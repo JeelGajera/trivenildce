@@ -28,6 +28,24 @@ const HeroSection = () => {
         </div>
         <div className="side-image mt-12 lg:mb-24 lg:mt-0 mb-0 justify-center items-center">
           {/* animated triveni logo */}
+          <div className="relative w-56 sm:w-auto sm:mt-52">
+            <Image
+              src="/hero/logo.png"
+              alt="Triveni Logo"
+              width={180}
+              height={80}
+              className="w-28 sm:w-[200px] absolute invert top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+            />
+            <div className="w-56 sm:w-auto sm:mt-52">
+              <Image
+                src="/hero/Mna.png"
+                alt="Triveni Logo"
+                width={420}
+                height={420}
+                className="animate-spinSlow"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </section>
