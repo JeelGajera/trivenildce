@@ -180,19 +180,22 @@
   width: 100%;
   white-space: nowrap;
   position: relative;
-  animation: marquee 12s linear infinite;
-}
-
-@media (max-width: 768px) {
-  .horizontal_tabline {
-    font-size: 2rem;
-  }
-  .marquee {
-    animation: marquee 8s linear infinite;
-  }
+  overflow: hidden; /* Ensure content outside container is hidden */
 }
 
 @keyframes marquee {
-  0% { transform: translateX(100%); }
-  100% { transform: translateX(-100%); }
+  from { transform: translateX(100%); } /* Start position */
+  to { transform: translateX(-100%); } /* End position */
+}
+
+.marquee > * {
+  display: inline-block; /* Ensure inline-block for proper marquee effect */
+  animation: marquee 14s linear infinite; /* Apply animation to child elements */
+}
+
+
+@media (max-width: 768px) {
+  .horizontal_tabline {
+    font-size: 3rem;
+  }
 }

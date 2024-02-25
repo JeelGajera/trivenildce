@@ -9,54 +9,6 @@ import { Suspense } from "react";
 
 type Props = {};
 
-const fakeEvents = [
-  {
-    title: "Battle of musicians",
-    href: "slug-1",
-    imageUrl: "https://source.unsplash.com/random?music",
-  },
-  {
-    title: "Gym Freaks",
-    href: "slug-2",
-    imageUrl: "https://source.unsplash.com/random?gym",
-  },
-  {
-    title: "CodeSters",
-    href: "slug-3",
-    imageUrl: "https://source.unsplash.com/random?code",
-  },
-  {
-    title: "Electrolustion",
-    href: "slug-4",
-    imageUrl: "https://source.unsplash.com/random?electricity",
-  },
-  {
-    title: "ChemStorm",
-    href: "slug-5",
-    imageUrl: "https://source.unsplash.com/random?chemicals",
-  },
-  {
-    title: "Mechanova",
-    href: "slug-6",
-    imageUrl: "https://source.unsplash.com/random?mechanics",
-  },
-  {
-    title: "Civilution",
-    href: "slug-7",
-    imageUrl: "https://source.unsplash.com/random?civil",
-  },
-  {
-    title: "MindSpark",
-    href: "slug-8",
-    imageUrl: "https://source.unsplash.com/random?mind",
-  },
-  {
-    title: "RoboRace",
-    href: "slug-9",
-    imageUrl: "https://source.unsplash.com/random?robot",
-  },
-];
-
 // TODO: Implement filters and pagination
 async function AllEvents({ searchParams: sp }: PageProps) {
   const eventsPromise = reader.collections.events.all();

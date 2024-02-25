@@ -99,7 +99,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <center className="text-gray-500 -mb-5">
+        <center className="text-gray-400 mt-4 -mb-4">
           &copy; 2024 Triveni LDCE. All rights reserved
         </center>
       </footer>
