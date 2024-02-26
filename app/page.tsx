@@ -17,7 +17,7 @@ export default function Home() {
       <AboutUsSection />
 
       <div className="marquee mb-[10vh]">
-        <p className="text-4xl sm:text-6xl font-bold my-10 md:my-0 text_shadow_teal animate-glitch_wave font-inter">
+        <p className="text-4xl sm:text-6xl font-bold my-8 md:my-0 text_shadow_teal animate-glitch_wave font-inter py-3">
         Triveni 2K24: Where Rivers of Talent Merge! March 21<sup>th</sup>, 22<sup>th</sup>, 23<sup>rd</sup>.
         </p>
       </div>

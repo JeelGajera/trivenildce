@@ -31,11 +31,12 @@ function SpecialAttraction() {
           href="/events/ctf-competition"
         />
         <SpecialAttractionCard
-          imageUrl="/images/dronerace.webp"
-          title="MUN"
+          imageUrl="https://wsrv.nl/?url=raw.githubusercontent.com/mdhruvil/triveni/main/content/events/mun-shaping-tomorrow-s-diplomacy/eventImg.jpg&h=400"
+          title="MUN: SHAPING TOMORROW’S DIPLOMACY"
+          href="/events/mun-shaping-tomorrow-s-diplomacy"
         />
         <SpecialAttractionCard
-          imageUrl="/images/ldtalks.jpg"
+          imageUrl="https://res.cloudinary.com/earthian/image/upload/v1708971795/Triveni2K24/sectionBanner_fxcbo0.webp"
           wFull
           title="Cultural Night"
         />
@@ -85,7 +86,7 @@ function SpecialAttractionCard({
           fill
           className="object-cover pointer-events-none"
         />
-        <h3 className="absolute text-center pb-7 text-lg font-semibold md:pb-20 md:text-3xl">
+        <h3 className="absolute text-center pb-7 text-lg font-semibold  md:text-3xl z-10 bottom-0 left-0 pl-4 w-full bg-gradient-to-t from-black">
           {title}
         </h3>
       </div>

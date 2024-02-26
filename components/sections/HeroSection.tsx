@@ -7,7 +7,7 @@ const HeroSection = () => {
   return (
     <section
       className="hero min-h-screen mb-10"
-      style={{ backgroundImage: "url(/images/HeroSection.png)" }}
+      style={{ backgroundImage: "url(https://res.cloudinary.com/earthian/image/upload/v1708971788/Triveni2K24/HeroSection_olgz9r.webp)" }}
     >
       <div className="hero-overlay bg-opacity-50 bg-gray-950"></div>
       <div className="container flex flex-col sm:flex-row items-center flex-wrap justify-center md:justify-between lg:justify-between w-[98%]">

@@ -5,7 +5,7 @@ const SectionBanner = () => {
     <section className="mb-30 overflow-hidden select-none" id="sponsors">
       <div className="relative h-[600px] w-screen">
         <Image
-          src="/images/sectionBanner.png"
+          src="https://res.cloudinary.com/earthian/image/upload/v1708971795/Triveni2K24/sectionBanner_fxcbo0.webp"
           alt="Section banner"
           className="object-cover absolute left-0"
           fill

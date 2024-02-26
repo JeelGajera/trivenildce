@@ -17,7 +17,7 @@
   padding: 30px 30px 40px 80px;
   border: none;
   border-radius: 0 20px 20px 0;
-  font: 24px "Shadows Into Light", cursive;
+  font: 24px;
   background: #fff linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 0) 0 20px/100%
     40px;
 }
@@ -43,7 +43,6 @@
   margin-top: 40px;
   float: right;
   border: none;
-  font-family: "Shadows Into Light", cursive;
   color: #0a1785;
   background: transparent;
   cursor: pointer;
@@ -60,7 +59,7 @@
 }
 .form__field:empty {
   display: inline-block;
-  color: #ddd;
+  color: #14b8a585;
 }
 .form__field:empty:before,
 .form__field:empty:focus:before {

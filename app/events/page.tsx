@@ -45,9 +45,6 @@ async function AllEvents({ searchParams: sp }: PageProps) {
           />
         </Suspense>
       </div>
-      <p className="tracking-wide animate-glitch horizontal_tabline">
-        Triveni-2K24, Triveni-2K24, Triveni-2K24, Triveni-2K24, Triveni-2K24, Triveni-2K24, Triveni-2K24, Triveni-2K24, Triveni-2K24,
-      </p>
     </>
   );
 }
