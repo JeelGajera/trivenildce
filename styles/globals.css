@@ -147,7 +147,7 @@
 }
 
 .texture_bg {
-  background-image: url("/images/bg.jpg");
+  background-image: url("https://res.cloudinary.com/earthian/image/upload/v1708971456/Triveni2K24/bg_z8g1gw.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
