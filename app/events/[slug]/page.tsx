@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import { Metadata } from "next";
 import EventCard from "@/components/EventCard";
 import { Badge } from "@/components/ui/badge";
 import { Button, buttonVariants } from "@/components/ui/button";
@@ -14,6 +15,17 @@ type Props = {
     slug: string;
   };
 };
+
+export const generateMetadata = ({ params }: Props): Metadata => {
+  const title = ({ slug }: { slug: string }) => {
+    const words = slug.split('-');
+    return words.map((word: string) => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+  }
+  return {
+    title: `Triveni 2K24 | ${title(params)} - Embark On The Journey of Inno-Culture ✨`,
+  };
+}
+
 
 async function Page({ params }: Props) {
   const eventPromise = reader.collections.events.read(params.slug, {
