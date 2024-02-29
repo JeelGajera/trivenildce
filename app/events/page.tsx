@@ -1,4 +1,5 @@
 import { PageProps } from "@/.next/types/app/events/page";
+import { Metadata } from "next";
 import EventCard from "@/components/EventCard";
 import DepFilter from "@/components/sections/events/DepFilter";
 import DomainsFilter from "@/components/sections/events/DomainsFilter";
@@ -8,6 +9,12 @@ import { DocumentElement } from "@keystatic/core";
 import { Suspense } from "react";
 
 type Props = {};
+
+export const metadata: Metadata = {
+  title: "Triveni 2K24 | Events - Embark On The Journey of Inno-Culture ✨",
+  description: "Discover a diverse range of events at Triveni 2K24 Annual Fest 2023! From technical competitions to cultural performances, there's something for everyone. Explore our event listings and join in the excitement!",
+};
+
 
 // TODO: Implement filters and pagination
 async function AllEvents({ searchParams: sp }: PageProps) {
