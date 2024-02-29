@@ -7,15 +7,20 @@ const HeroSection = () => {
   return (
     <section
       className="hero min-h-screen mb-10"
-      style={{ backgroundImage: "url(https://res.cloudinary.com/earthian/image/upload/v1708971788/Triveni2K24/HeroSection_olgz9r.webp)" }}
+      style={{
+        backgroundImage:
+          "url(https://res.cloudinary.com/earthian/image/upload/v1708971788/Triveni2K24/HeroSection_olgz9r.webp)",
+      }}
     >
       <div className="hero-overlay bg-opacity-50 bg-gray-950"></div>
       <div className="container flex flex-col sm:flex-row items-center flex-wrap justify-center md:justify-between lg:justify-between w-[98%]">
         <div className="text w-[100%] md:w-[50%] lg:w-[60%] p-3">
-          <h1
-            className="text-4xl md:text-5xl lg:text-7xl mt-20 sm:mt-0 font-clourso shadow-md animate-glitch"
-          >
-            <span className=" text-teal-500">Triveni 2k24</span> - Embark on the journey of <span className="text-red-500"> InnoCulture </span>
+          <h2 className="font-actor text-lg md:text-2xl mt-20 sm:mt-0">
+            L.D. College of Engineering, Ahmedabad presents
+          </h2>
+          <h1 className="text-4xl md:text-5xl lg:text-7xl mt-5 font-clourso shadow-md animate-glitch">
+            <span className=" text-teal-500">Triveni 2k24</span> - Embark on the
+            journey of <span className="text-red-500"> InnoCulture </span>
           </h1>
           <div className="buttons mt-10 w-full">
             <Link href="/events">
