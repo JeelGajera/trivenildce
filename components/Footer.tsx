@@ -1,6 +1,7 @@
 "use client";
 
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 
 import {
   FOOTER_SOCIALS,
@@ -24,8 +25,9 @@ const Footer = () => {
         <div className="flex flex-col sm:flex-row md:gap-y-0 gap-y-[40px]">
           {/* left side */}
           <div className="w-full h-full flex items-center justify-center flex-col">
-            <div className="flex">
+            <div className="flex flex-col">
               <GradientText />
+              <img src="/images/LDCE-Logo.png" alt="LDCE-Logo" className="invert m-auto w-[10rem] mt-[2rem] md:ml-0" />
             </div>
           </div>
           {/* right side */}
