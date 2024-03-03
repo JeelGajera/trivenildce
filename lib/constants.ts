@@ -15,7 +15,7 @@ export const NAV_ITEMS = [
   },
   {
     label: "Sponsors",
-    href: "",
+    href: "/sponsors",
   },
 ];
 
@@ -31,6 +31,10 @@ export const MAIN_PAGE_REFLECTIVE_NAV_LINKS = [
   {
     label: "Contact",
     href: "/contact",
+  },
+  {
+    label: "Sponsors",
+    href: "/sponsors ",
   },
 ];
 
