@@ -24,6 +24,7 @@ export default function page() {
                         <div className="flex justify-center md:mt-[1rem]">
                                 <div className='md:grid md:grid-cols-3 md:gap-[5rem] md:m-[10rem] md:mt-[5rem] md:mb-[5rem] items-center place-items-center p-[1rem]'>
                                         <SponsorCard imageUrl="https://res.cloudinary.com/earthian/image/upload/v1709451456/Triveni2K24/sposors/udzbmznto2s3hhzm1epa.png" title='Title Sponsor' name="D VIVID Cunsultant" />
+                                        <SponsorCard imageUrl="https://res.cloudinary.com/earthian/image/upload/v1709451461/Triveni2K24/sposors/ne4xeyozqil8rnju5etr.png" title='Event Partner' name='Ami Polymer' />
                                         <SponsorCard imageUrl="https://res.cloudinary.com/earthian/image/upload/v1709451460/Triveni2K24/sposors/tawrtlw4tolbgjwt4kjg.png" title='Event Partner' name="My Global Connect" />
                                         <SponsorCard imageUrl="https://res.cloudinary.com/earthian/image/upload/v1709451460/Triveni2K24/sposors/cay6hpk6henyulzlfnnp.jpg" title='Workshop | Technology Partner' name="Demmisto Technology Pvt Ltd" />
                                         <SponsorCard imageUrl="https://res.cloudinary.com/earthian/image/upload/v1709451464/Triveni2K24/sposors/diwpw41oa2lmihtvxx8f.jpg" title='Workshop Partner' name="EV Robotics Skill Coach India Pvt Ltd" />
@@ -31,7 +32,6 @@ export default function page() {
                                         <SponsorCard imageUrl="https://res.cloudinary.com/earthian/image/upload/v1709451463/Triveni2K24/sposors/bybopbkfglznxtteqau0.png" title='Stall Partner' name='Level Up'/>
                                         <SponsorCard imageUrl="https://res.cloudinary.com/earthian/image/upload/v1709451477/Triveni2K24/sposors/ednlwbuapbfwy9hvz043.png" title='Goodies Partner' name='Nutsweet' />
                                         <SponsorCard imageUrl="https://res.cloudinary.com/earthian/image/upload/v1709451462/Triveni2K24/sposors/htowue5wweilsfvfl5ll.jpg" title='Learning Partner' name='Priyesh Sir Vidyapeeth' />
-                                        <SponsorCard imageUrl="https://res.cloudinary.com/earthian/image/upload/v1709451461/Triveni2K24/sposors/ne4xeyozqil8rnju5etr.png" title='Event Partner' name='Ami Polymer' />
                                 </div>
                         </div>
 
