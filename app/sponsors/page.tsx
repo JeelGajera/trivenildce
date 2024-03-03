@@ -24,7 +24,7 @@ export default function page() {
                                 <SponsorCard imageUrl="/sponsors/levelup logo.png" title='Stall Partner' />
                                 <SponsorCard imageUrl="/sponsors/nutsweet-logo.png" title='Goodies Partner' />
                                 <SponsorCard imageUrl="/sponsors/priyesh_Vidhyapeeth.jpg" title='Learning Partner' />
-                                <SponsorCard imageUrl="/sponsors/ami-polymer.png" title='' />
+                                <SponsorCard imageUrl="/sponsors/ami-polymer.png" title='Ami Polymer' />
                         </div>
                 </div>
 
