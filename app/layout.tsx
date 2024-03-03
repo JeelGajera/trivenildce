@@ -11,10 +11,12 @@ import { actor, inter } from "@/lib/fonts";
 
 import "@/styles/globals.css";
 import Head from "next/head";
+import SponserPopup from "@/components/SponserPopup";
 
 export const metadata: Metadata = {
   title: "Triveni 2K24 - Embark On The Journey of Inno-Culture ✨",
-  description: "Experience the essence of Triveni Annual Fest 2023, where education meets innovation. Join us in celebrating excellence in technical education and research, shaping responsible citizens and competent professionals for a sustainable future.",
+  description:
+    "Experience the essence of Triveni Annual Fest 2023, where education meets innovation. Join us in celebrating excellence in technical education and research, shaping responsible citizens and competent professionals for a sustainable future.",
 };
 
 export default function RootLayout({
@@ -39,9 +41,11 @@ export default function RootLayout({
         {children}
 
         <p className="tracking-wide animate-glitch horizontal_tabline">
-          Triveni-2K24, Triveni-2K24, Triveni-2K24, Triveni-2K24, Triveni-2K24, Triveni-2K24, Triveni-2K24, Triveni-2K24, Triveni-2K24,
+          Triveni-2K24, Triveni-2K24, Triveni-2K24, Triveni-2K24, Triveni-2K24,
+          Triveni-2K24, Triveni-2K24, Triveni-2K24, Triveni-2K24,
         </p>
         <Footer />
+        <SponserPopup />
       </body>
     </html>
   );
