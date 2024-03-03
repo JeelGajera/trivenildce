@@ -18,14 +18,17 @@ type Props = {
 
 export const generateMetadata = ({ params }: Props): Metadata => {
   const title = ({ slug }: { slug: string }) => {
-    const words = slug.split('-');
-    return words.map((word: string) => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
-  }
-  return {
-    title: `Triveni 2K24 | ${title(params)} - Embark On The Journey of Inno-Culture ✨`,
+    const words = slug.split("-");
+    return words
+      .map((word: string) => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(" ");
   };
-}
-
+  return {
+    title: `Triveni 2K24 | ${title(
+      params
+    )} - Embark On The Journey of Inno-Culture ✨`,
+  };
+};
 
 async function Page({ params }: Props) {
   const eventPromise = reader.collections.events.read(params.slug, {
@@ -55,7 +58,9 @@ async function Page({ params }: Props) {
             />
           </div>
           <div className="flex flex-col justify-center gap-2 md:gap-4">
-            <h1 className="font-actor text-3xl md:text-4xl mb-2">{event.name}</h1>
+            <h1 className="font-actor text-3xl md:text-4xl mb-2">
+              {event.name}
+            </h1>
             <div className="flex items-center gap-2">
               Mode :
               {event.entryType.map((badge) => (
@@ -70,7 +75,9 @@ async function Page({ params }: Props) {
               <button
                 data-event-id="80001361265782"
                 data-ticket-id={event.AE_id}
-                className={buttonVariants({ className: "ae-ticket-book-button" })}
+                className={buttonVariants({
+                  className: "ae-ticket-book-button",
+                })}
               >
                 Enroll Now <ArrowRight className="ml-2 h-4 w-4" />
               </button>
@@ -118,7 +125,12 @@ async function Page({ params }: Props) {
               })}
             </div>
             <div className="">
-              <Image src="/images/prize.png" alt="prize" width={100} height={100} />
+              <Image
+                src="/images/prize.png"
+                alt="prize"
+                width={100}
+                height={100}
+              />
             </div>
           </div>
         </div>
@@ -195,10 +207,18 @@ async function Page({ params }: Props) {
                   );
                 },
               },
+              inline: {
+                link({ children, href }) {
+                  return (
+                    <a href={href} className="link">
+                      {children}
+                    </a>
+                  );
+                },
+              },
             }}
           ></DocumentRenderer>
         </div>
-
 
         <div className="mt-12 space-y-3">
           <h1 className="text-3xl font-bold my-10 md:my-0 font-actor text_shadow_red animate-glitch_wave">
