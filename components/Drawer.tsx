@@ -23,7 +23,7 @@ const Drawer = () => {
               translateY: "-100%",
             }}
             transition={{ duration: 0.3, type: "spring" }}
-            className="fixed top-0 left-0 right-0 h-[500px] bg-white backdrop-blur-md bg-opacity-20 w-screen z-[100] rounded-b-[60px] origin-top-right"
+            className="fixed top-0 left-0 right-0 h-[600px] bg-white backdrop-blur-md bg-opacity-20 w-screen z-[100] rounded-b-[60px] origin-top-right"
           >
             <div className="flex flex-col gap-10 p-[70px] h-full justify-end">
               {NAV_ITEMS.map((item, index) => (

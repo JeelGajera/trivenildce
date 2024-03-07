@@ -1,17 +1,15 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
-import React, { useEffect, useState } from "react";
 import {
   Dialog,
   DialogContent,
   DialogDescription,
   DialogHeader,
   DialogTitle,
-  DialogTrigger,
 } from "@/components/ui/dialog";
 import { usePathname } from "next/navigation";
-import SponsorCard from "./sponsors_Card";
+import { useEffect, useState } from "react";
 
 type Props = {};
 
