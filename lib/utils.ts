@@ -30,6 +30,8 @@ export function getDomainFromSlug(slug: string) {
       return "Technical Events";
     case "non-technical-events-and-sports":
       return "Non-Technical Events & Sports";
+    case "youth-symposium":
+      return "Youth Symposium";
     default:
       return "No domain found";
   }
