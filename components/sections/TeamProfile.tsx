@@ -28,9 +28,6 @@ function TeamProfile({ name, role, mail, phone, image }: Props) {
         <Link href={`mailto:${mail}`}>
           <MailIcon className="size-6" />
         </Link>
-        <Link href={`tel:+91${phone}`}>
-          <PhoneCallIcon className="size-6" />
-        </Link>
       </div>
     </div>
   );
