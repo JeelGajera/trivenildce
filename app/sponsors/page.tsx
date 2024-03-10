@@ -34,7 +34,7 @@ export default function page() {
             name="D VIVID Cunsultant"
           />
           <SponsorCard
-            imageUrl="https://res.cloudinary.com/earthian/image/upload/v1709451461/Triveni2K24/sposors/ne4xeyozqil8rnju5etr.png"
+            imageUrl="https://res.cloudinary.com/dk6oyez3u/image/upload/f_auto,q_auto/cdt2sjrrhb0xajhrkupx"
             title="Event Partner"
             name="Ami Polymer"
           />
@@ -72,6 +72,16 @@ export default function page() {
             imageUrl="https://res.cloudinary.com/earthian/image/upload/v1709451462/Triveni2K24/sposors/htowue5wweilsfvfl5ll.jpg"
             title="Learning Partner"
             name="Priyesh Sir Vidyapeeth"
+          />
+          <SponsorCard
+            imageUrl="https://res.cloudinary.com/dk6oyez3u/image/upload/f_auto,q_auto/ba3xyshztj1vy4anwnmg"
+            title="Energy drinks Partner"
+            name="Monster Energy"
+          />
+          <SponsorCard
+            imageUrl="https://res.cloudinary.com/dk6oyez3u/image/upload/f_auto,q_auto/s8gnvmd3du28ps3zbfr6"
+            title="Ticketing Partner"
+            name="All Events"
           />
         </div>
       </div>
