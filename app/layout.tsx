@@ -29,6 +29,8 @@ export default function RootLayout({
       <Script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></Script>
       <Head>
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="preload" href="https://res.cloudinary.com/earthian/video/upload/v1710059894/Triveni2K24/LDCE_Campus_sukcok.mp4" as="video" />
+        <link rel="preload" href="https://res.cloudinary.com/earthian/video/upload/v1710064371/Triveni2K24/guitar_gif_doqkik.mp4" as="video" />
       </Head>
 
       <body

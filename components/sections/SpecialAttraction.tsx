@@ -24,7 +24,7 @@ function SpecialAttraction() {
           </Button>
         </Link>
       </div>
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-5 md:mt-7">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-5 md:mt-7">
         <SpecialAttractionCard
           imageUrl="https://wsrv.nl/?url=raw.githubusercontent.com/mdhruvil/triveni/main/content/events/ctf-competition/eventImg.jpg&h=400"
           title="Capture The Flag"
@@ -36,9 +36,14 @@ function SpecialAttraction() {
           href="/events/mun-shaping-tomorrow-s-diplomacy"
         />
         <SpecialAttractionCard
+          imageUrl="https://res.cloudinary.com/earthian/image/upload/v1710069004/Triveni2K24/Symposium-thumb_pt0sya.jpg"
+          title="Symposium"
+          href="/events?d=symposium"
+        />
+        <SpecialAttractionCard
           imageUrl="https://res.cloudinary.com/earthian/image/upload/v1708971795/Triveni2K24/sectionBanner_fxcbo0.webp"
-          wFull
-          title="Cultural Night"
+          title="RANGMANCH: Unleashing the extraordinary"
+          href="/events?d=rangmanch"
         />
       </div>
       <div className="flex justify-center mt-5 md:hidden">
