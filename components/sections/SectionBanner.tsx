@@ -41,11 +41,6 @@ const SectionBanner = () => {
     videoRef.current?.pause();
   };
 
-  useEffect(() => {
-    // Ensure video plays with sound initially
-    setMuted(false);
-  }, []);
-
   return (
     <section className="mb-30 overflow-hidden select-none" id="sponsors">
       <div className="relative h-[600px] w-screen">
@@ -69,7 +64,7 @@ const SectionBanner = () => {
         />
         {/* Mute/Unmute button */}
         <button
-          className="absolute top-4 left-4 z-10 text-primary bg-white bg-opacity-10 p-2 rounded-full"
+          className="absolute top-4 left-4 z-10 text-primary bg-white bg-opacity-10 p-2 rounded-full animate-pulse"
           onClick={toggleMute}
         >
           {/* Display different icons based on the muted state */}

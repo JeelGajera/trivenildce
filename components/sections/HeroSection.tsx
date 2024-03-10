@@ -42,11 +42,6 @@ const HeroSection = () => {
     videoRef.current?.pause();
   };
 
-  useEffect(() => {
-    // Ensure video plays with sound initially
-    setMuted(false);
-  }, []);
-
   return (
     <section className="hero min-h-screen mb-10 relative">
       <video
@@ -105,7 +100,7 @@ const HeroSection = () => {
       </div>
       {/* Mute/Unmute button */}
       <button
-        className="absolute bottom-4 right-4 z-10 text-primary bg-white bg-opacity-10 p-2 rounded-full"
+        className="absolute bottom-4 right-4 z-10 text-primary bg-white bg-opacity-10 p-2 rounded-full animate-pulse"
         onClick={toggleMute}
       >
         {muted ? (
