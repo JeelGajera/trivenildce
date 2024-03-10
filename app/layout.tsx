@@ -29,18 +29,11 @@ export default function RootLayout({
   return (
     <html lang="en" className="overflow-x-hidden">
       <Script id="jquery" src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js" crossOrigin="anonymous" strategy="beforeInteractive"></Script>
-      <Head>
-        <meta charSet="utf-8" />
-        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-        <meta name="theme-color" content="#000000" />
-        <link rel="preload" fetchPriority="high" href="https://res.cloudinary.com/earthian/video/upload/v1710059894/Triveni2K24/LDCE_Campus_sukcok.mp4" as="video" />
-        <link rel="preload" fetchPriority="high" href="https://res.cloudinary.com/earthian/video/upload/v1710064371/Triveni2K24/guitar_gif_doqkik.mp4" as="video" />
-        <Script
+      <Script
           id='gtag'
           strategy='lazyOnload'
           src={"https://www.googletagmanager.com/gtag/js?id=G-PTL05QXFP2"}
-        />
+        ></Script>
         <Script
           strategy='lazyOnload'
           id='gtag-init'>{`
@@ -51,6 +44,13 @@ export default function RootLayout({
           gtag('config', 'G-PTL05QXFP2');
         `}
         </Script>
+      <Head>
+        <meta charSet="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        <meta name="theme-color" content="#000000" />
+        <link rel="preload" fetchPriority="high" href="https://res.cloudinary.com/earthian/video/upload/v1710059894/Triveni2K24/LDCE_Campus_sukcok.mp4" as="video" />
+        <link rel="preload" fetchPriority="high" href="https://res.cloudinary.com/earthian/video/upload/v1710064371/Triveni2K24/guitar_gif_doqkik.mp4" as="video" />
       </Head>
 
       <body
