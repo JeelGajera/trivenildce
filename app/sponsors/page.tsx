@@ -79,7 +79,7 @@ export default function page() {
             name="Monster Energy"
           />
           <SponsorCard
-            imageUrl="https://res.cloudinary.com/dk6oyez3u/image/upload/f_auto,q_auto/s8gnvmd3du28ps3zbfr6"
+            imageUrl="https://cdn2.allevents.in/media-kit/png/ae-logo-portrait-white-vector.png"
             title="Ticketing Partner"
             name="All Events"
           />
