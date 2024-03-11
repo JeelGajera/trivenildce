@@ -19,7 +19,7 @@ function SponserPopup({ }: Props) {
   const [open, setOpen] = useState(false);
   useEffect(() => {
     if (
-      sessionStorage.getItem("sponserPopupOpened") !== "" &&
+      sessionStorage.getItem("sponserPopupOpened") !== "true" &&
       pathName.startsWith("/events")
     ) {
       setOpen(true);
