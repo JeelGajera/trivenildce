@@ -12,7 +12,7 @@ type Props = {};
 
 export const metadata: Metadata = {
   title: "Triveni 2K24 | Events - Embark On The Journey of Inno-Culture ✨",
-  description: "Discover a diverse range of events at Triveni 2K24 Annual Fest 2023! From technical competitions to cultural performances, there's something for everyone. Explore our event listings and join in the excitement!",
+  description: "Discover a diverse range of events at Triveni 2K24 Annual Fest 2024! From technical competitions to cultural performances, there's something for everyone. Explore our event listings and join in the excitement!",
 };
 
 

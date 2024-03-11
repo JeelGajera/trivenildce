@@ -7,7 +7,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Triveni 2K24 | Sponsors - Embark On The Journey of Inno-Culture ✨",
   description:
-    "Discover our esteemed sponsors and partners for Triveni 2K24 Annual Fest 2023! We extend our heartfelt gratitude to these organizations for their support and contribution to our event. Explore our sponsors and join us in celebrating innovation and culture!",
+    "Discover our esteemed sponsors and partners for Triveni 2K24 Annual Fest 2024! We extend our heartfelt gratitude to these organizations for their support and contribution to our event. Explore our sponsors and join us in celebrating innovation and culture!",
 };
 
 export default function page() {

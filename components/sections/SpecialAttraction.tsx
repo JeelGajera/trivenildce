@@ -32,7 +32,7 @@ function SpecialAttraction() {
         />
         <SpecialAttractionCard
           imageUrl="https://wsrv.nl/?url=raw.githubusercontent.com/mdhruvil/triveni/main/content/events/mun-shaping-tomorrow-s-diplomacy/eventImg.jpg&h=400"
-          title="MUN: SHAPING TOMORROW’S DIPLOMACY"
+          title="MUN"
           href="/events/mun-shaping-tomorrow-s-diplomacy"
         />
         <SpecialAttractionCard
@@ -42,7 +42,7 @@ function SpecialAttraction() {
         />
         <SpecialAttractionCard
           imageUrl="https://res.cloudinary.com/earthian/image/upload/v1708971795/Triveni2K24/sectionBanner_fxcbo0.webp"
-          title="RANGMANCH: Unleashing the extraordinary"
+          title="RANGMANCH"
           href="/events?d=rangmanch"
         />
       </div>

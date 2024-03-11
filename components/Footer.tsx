@@ -27,7 +27,11 @@ const Footer = () => {
           <div className="w-full h-full flex items-center justify-center flex-col">
             <div className="flex flex-col">
               <GradientText />
+              <div className="flex">
               <img src="/images/LDCE-Logo.png" alt="LDCE-Logo" className="invert m-auto w-[10rem] mt-[2rem] md:ml-0" />
+              <img src="/images/75ldce.png" alt="LDCE-Logo" className="m-auto w-[10rem] mt-[2rem] md:ml-0" />
+              <img src="/hero/logo.png" alt="LDCE-Logo" className="invert hidden sm:inline-block m-auto w-[15rem] mt-[2rem] md:ml-0" />
+              </div>
             </div>
           </div>
           {/* right side */}
