@@ -17,7 +17,7 @@ import GTAG from "@/components/GTAG";
 export const metadata: Metadata = {
   title: "Triveni 2K24 - Embark On The Journey of Inno-Culture ✨",
   description:
-    "Experience the essence of Triveni Annual Fest 2023, where education meets innovation. Join us in celebrating excellence in technical education and research, shaping responsible citizens and competent professionals for a sustainable future.",
+    "Experience the essence of Triveni Annual Fest 2024, where education meets innovation. Join us in celebrating excellence in technical education and research, shaping responsible citizens and competent professionals for a sustainable future.",
 };
 
 export default function RootLayout({
