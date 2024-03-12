@@ -2,26 +2,29 @@
 
 import { Badge } from "@/components/ui/badge";
 import React, { useEffect, useState } from "react";
-import { team } from "./data";
+import { teamData } from "./data";
 import TeamProfile from "@/components/sections/TeamProfile";
-
-const sections = [
-  "founders",
-  "advisors",
-  "conveners",
-  "heads",
-  "members",
-] as const;
-
-type Section = (typeof sections)[number];
+import { flushSync } from "react-dom";
 
 function Page() {
-  const [section, setSection] = useState<Section>("founders");
-  const [members, setMembers] = useState(team[section]);
+  const [teams, setTeams] = useState<string[]>([]);
+  const [team, setTeam] = useState("founders");
+
+  const [members, setMembers] = useState<typeof teamData>([]);
 
   useEffect(() => {
-    setMembers(team[section]);
-  }, [section]);
+    const cacheTeam: string[] = [];
+    teamData.forEach((p) =>
+      !cacheTeam.includes(p.team) ? cacheTeam.push(p.team) : {}
+    );
+    setTeams(cacheTeam);
+
+    setTeam(cacheTeam[0]);
+  }, []);
+
+  useEffect(() => {
+    setMembers(teamData.filter((p) => p.team === team));
+  }, [team]);
 
   return (
     <>
@@ -35,34 +38,34 @@ function Page() {
       </div>
       <div className="my-5 container">
         <div className="flex overflow-x-auto flex-shrink-0 gap-2 my-5">
-          {sections.map((s) => {
+          {teams.map((t) => {
             return (
               <Badge
-                key={s}
-                variant={section === s ? "default" : "outline"}
+                key={t}
+                variant={team === t ? "default" : "outline"}
                 className="text-white mr-1 cursor-pointer my-2"
                 onClick={() => {
-                  setSection(s);
+                  setTeam(t);
                 }}
               >
-                {s}
+                {t}
               </Badge>
             );
           })}
         </div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-4 container">
-        {members.length === 0
+        {members && members.length === 0
           ? "No found"
           : members.map((m) => {
               return (
                 <React.Fragment key={m.Timestamp}>
                   <TeamProfile
-                    mail={m.Username}
-                    name={m.Name}
-                    phone={m["Phone Number"].toString()}
-                    role={m["Position/ Role in Triveni"]}
-                    image={m.Photo}
+                    mail={m.email}
+                    name={m.firstname + " " + m.lastname}
+                    linkedin={m.linkedin}
+                    role={m.position}
+                    image={m.imageurl || "/images/placeholder-user.png"}
                   />
                 </React.Fragment>
               );
