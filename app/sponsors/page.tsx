@@ -1,5 +1,5 @@
 import React from "react";
-import SponsorCard from "@/components/sponsors_Card";
+import SponsorCard, { TitleSponsorCard } from "@/components/sponsors_Card";
 import Image from "next/image";
 import "@/styles/sponsors.css";
 import { Metadata } from "next";
@@ -26,13 +26,15 @@ export default function page() {
           </h1>
         </div>
       </div>
-      <div className="flex justify-center md:mt-[1rem]">
-        <div className="md:grid md:grid-cols-3 md:gap-[5rem] md:m-[10rem] md:mt-[5rem] md:mb-[5rem] items-center place-items-center p-[1rem]">
-          <SponsorCard
+      <div className="flex justify-center md:mt-[1rem] flex-col">
+        <div className="mt-5">
+          <TitleSponsorCard
             imageUrl="https://res.cloudinary.com/earthian/image/upload/v1709451456/Triveni2K24/sposors/udzbmznto2s3hhzm1epa.png"
             title="Title Sponsor"
             name="D VIVID Cunsultant"
           />
+        </div>
+        <div className="md:grid md:grid-cols-3 md:gap-[5rem] md:m-[10rem] md:mt-[3rem] md:mb-[5rem] items-center place-items-center p-[1rem]">
           <SponsorCard
             imageUrl="https://res.cloudinary.com/dk6oyez3u/image/upload/f_auto,q_auto/cdt2sjrrhb0xajhrkupx"
             title="Event Partner"
@@ -82,6 +84,11 @@ export default function page() {
             imageUrl="https://cdn2.allevents.in/media-kit/png/ae-logo-portrait-white-vector.png"
             title="Ticketing Partner"
             name="All Events"
+          />
+          <SponsorCard
+            imageUrl="https://res.cloudinary.com/dk6oyez3u/image/upload/f_auto,q_auto/gxcw8iztyuv09ciogqgd"
+            title="Beatboxing Partner"
+            name="Vadodara Beatbox Community"
           />
         </div>
       </div>
