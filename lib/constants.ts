@@ -17,6 +17,10 @@ export const NAV_ITEMS = [
     label: "Contact",
     href: "/contact",
   },
+  {
+    label: "Team",
+    href: "/team",
+  },
 ];
 
 export const MAIN_PAGE_REFLECTIVE_NAV_LINKS = [
