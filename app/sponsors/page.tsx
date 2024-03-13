@@ -90,6 +90,16 @@ export default function page() {
             title="Beatboxing Partner"
             name="Vadodara Beatbox Community"
           />
+          <SponsorCard
+            imageUrl="https://res.cloudinary.com/dk6oyez3u/image/upload/f_auto,q_auto/qdp1m62n2w7erssr4l1n"
+            title="Gromming Partner"
+            name="No Scars"
+          />
+          <SponsorCard
+            imageUrl="https://res.cloudinary.com/dk6oyez3u/image/upload/f_auto,q_auto/logjvgtc54nsuaj9dkwl"
+            title="Gromming Partner"
+            name="Hydration Partner"
+          />
         </div>
       </div>
     </>
