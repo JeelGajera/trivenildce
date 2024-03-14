@@ -868,6 +868,22 @@ export const team = {
       image:
         "https://res.cloudinary.com/dk6oyez3u/image/upload/f_auto,q_auto/xcewqh9j3qliveqx2pu0",
     },
+    {
+      time: "3/12/2024 22:21:17",
+      email: null,
+      name: "Rajveer Singh",
+      role: "Production Team Member",
+      image:
+        "https://res.cloudinary.com/earthian/image/upload/v1710446595/Triveni2K24/rajveer_sign_team_slrtqa.jpg",
+    },
+    {
+      time: "3/12/2024 22:21:17",
+      email: null,
+      name: "Jemil Kanzara",
+      role: "Production Team Member",
+      image:
+        "https://res.cloudinary.com/earthian/image/upload/v1710447006/Triveni2K24/jemil_team_zsvkph.jpg",
+    },
   ],
   "Web Development": [
     {
