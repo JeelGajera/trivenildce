@@ -4,13 +4,14 @@ import TeamProfile from "@/components/sections/TeamProfile";
 import { Badge } from "@/components/ui/badge";
 import React, { useEffect, useState } from "react";
 import { team as teamData } from "./data";
+import { cn } from "@/lib/utils";
 
 const teams = Object.keys(teamData);
 
 function Page() {
   const [team, setTeam] = useState(teams[0]);
 
-  const [members, setMembers] = useState(teamData.founders);
+  const [members, setMembers] = useState(teamData["Founding Members"]);
 
   useEffect(() => {
     // @ts-ignore
@@ -45,7 +46,12 @@ function Page() {
           })}
         </div>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-4 container">
+      <div
+        className={cn([
+          "grid grid-cols-1 md:grid-cols-4 container",
+          team === "Founding Members" && "md:grid-cols-3",
+        ])}
+      >
         {members && members.length === 0
           ? "No found"
           : members.map((m) => {
@@ -56,6 +62,7 @@ function Page() {
                     name={m.name}
                     role={m.role}
                     image={m.image || "/images/placeholder-user.png"}
+                    linkedin={m.linkedin}
                   />
                 </React.Fragment>
               );

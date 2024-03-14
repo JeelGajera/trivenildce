@@ -14,7 +14,7 @@ export default function sponsors_Card({ imageUrl, title, name }: Props) {
         <img
           src={imageUrl}
           alt={title}
-          className="w-[15rem] rounded-3xl m-auto"
+          className="w-[15rem] rounded-lg m-auto"
         />
         <h1 className="text-[1.25rem] text-center mt-[2.5rem] bebas-neue-regular">
           {title}
