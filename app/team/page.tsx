@@ -1,29 +1,20 @@
 "use client";
 
+import TeamProfile from "@/components/sections/TeamProfile";
 import { Badge } from "@/components/ui/badge";
 import React, { useEffect, useState } from "react";
-import { teamData } from "./data";
-import TeamProfile from "@/components/sections/TeamProfile";
-import { flushSync } from "react-dom";
+import { team as teamData } from "./data";
+
+const teams = Object.keys(teamData);
 
 function Page() {
-  const [teams, setTeams] = useState<string[]>([]);
-  const [team, setTeam] = useState("founders");
+  const [team, setTeam] = useState(teams[0]);
 
-  const [members, setMembers] = useState<typeof teamData>([]);
-
-  useEffect(() => {
-    const cacheTeam: string[] = [];
-    teamData.forEach((p) =>
-      !cacheTeam.includes(p.team) ? cacheTeam.push(p.team) : {}
-    );
-    setTeams(cacheTeam);
-
-    setTeam(cacheTeam[0]);
-  }, []);
+  const [members, setMembers] = useState(teamData.founders);
 
   useEffect(() => {
-    setMembers(teamData.filter((p) => p.team === team));
+    // @ts-ignore
+    setMembers(teamData[team]);
   }, [team]);
 
   return (
@@ -59,13 +50,12 @@ function Page() {
           ? "No found"
           : members.map((m) => {
               return (
-                <React.Fragment key={m.Timestamp}>
+                <React.Fragment key={m.email}>
                   <TeamProfile
                     mail={m.email}
-                    name={m.firstname + " " + m.lastname}
-                    linkedin={m.linkedin}
-                    role={m.position}
-                    image={m.imageurl || "/images/placeholder-user.png"}
+                    name={m.name}
+                    role={m.role}
+                    image={m.image || "/images/placeholder-user.png"}
                   />
                 </React.Fragment>
               );

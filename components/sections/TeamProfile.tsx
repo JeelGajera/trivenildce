@@ -7,14 +7,13 @@ type Props = {
   name: string;
   mail: string;
   role: string;
-  linkedin: string | null;
   image: string;
 };
 
 const photo =
   "https://images.unsplash.com/photo-1560250097-0b93528c311a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8cHJvZmVzc2luYWwgaGVhZHNob3R8fHx8fHwxNzA5ODA1NjMx&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080";
 
-function TeamProfile({ name, role, mail, linkedin, image }: Props) {
+function TeamProfile({ name, role, mail, image }: Props) {
   return (
     <div className="flex flex-col justify-center items-center mb-5">
       <img
@@ -28,11 +27,6 @@ function TeamProfile({ name, role, mail, linkedin, image }: Props) {
         <Link href={`mailto:${mail}`}>
           <MailIcon className="size-6" />
         </Link>
-        {linkedin && (
-          <Link href={linkedin}>
-            <LinkedinIcon className="size-6" />
-          </Link>
-        )}
       </div>
     </div>
   );
