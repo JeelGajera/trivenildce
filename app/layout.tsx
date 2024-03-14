@@ -29,6 +29,8 @@ export default function RootLayout({
   return (
     <html lang="en" className="overflow-x-hidden">
       <Script id="jquery" src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js" crossOrigin="anonymous" strategy="beforeInteractive"></Script>
+      <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8164117122618034"
+     crossOrigin="anonymous"></Script>
       <Script
           id='gtag'
           strategy='lazyOnload'
