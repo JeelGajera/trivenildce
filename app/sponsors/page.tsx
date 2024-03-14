@@ -34,16 +34,30 @@ export default function page() {
             name="D VIVID Cunsultant"
           />
         </div>
-        <div className="md:grid md:grid-cols-3 md:gap-[5rem] md:m-[10rem] md:mt-[3rem] md:mb-[5rem] items-center place-items-center p-[1rem]">
+        <div className="flex flex-col md:flex-row justify-between md:w-1/2 mx-auto">
           <SponsorCard
-            imageUrl="https://res.cloudinary.com/dk6oyez3u/image/upload/f_auto,q_auto/cdt2sjrrhb0xajhrkupx"
+            imageUrl="https://res.cloudinary.com/dk6oyez3u/image/upload/f_auto,q_auto/fhiaqfj8bhvpg7bepqtp"
+            title="Co-Powered By"
+            name="ZCAD Group"
+          />
+          <SponsorCard
+            imageUrl="https://res.cloudinary.com/dk6oyez3u/image/upload/f_auto,q_auto/w4cpgbouo2yuqwifqtli"
+            title="In Association With"
+            name="Renaissance Educare PVT LTD"
+          />
+        </div>
+        <div className="md:grid md:grid-cols-3 md:gap-[5rem] md:m-[10rem] md:mt-[3rem] md:mb-[5rem] items-center place-items-center p-[1rem]">
+          {/* Dont convert this component to SponsorCard */}
+          <TitleSponsorCard
+            imageUrl="https://res.cloudinary.com/dk6oyez3u/image/upload/f_auto,q_auto,w_1.5,h_1.5/cdt2sjrrhb0xajhrkupx"
             title="Event Partner"
             name="Ami Polymer"
           />
+
           <SponsorCard
-            imageUrl="https://res.cloudinary.com/earthian/image/upload/v1709451460/Triveni2K24/sposors/tawrtlw4tolbgjwt4kjg.png"
-            title="Event Partner"
-            name="My Global Connect"
+            imageUrl="https://cdn2.allevents.in/media-kit/png/ae-logo-portrait-white-vector.png"
+            title="Ticketing Partner"
+            name="All Events"
           />
           <SponsorCard
             imageUrl="https://res.cloudinary.com/earthian/image/upload/v1709451460/Triveni2K24/sposors/cay6hpk6henyulzlfnnp.jpg"
@@ -55,25 +69,21 @@ export default function page() {
             title="Workshop Partner"
             name="EV Robotics Skill Coach India Pvt Ltd"
           />
-          <SponsorCard
+          {/* <SponsorCard
             imageUrl="https://res.cloudinary.com/earthian/image/upload/v1709451461/Triveni2K24/sposors/agrocpkmw8chyeyfimy7.png"
             title="Stall Partner"
             name="Canam"
-          />
-          <SponsorCard
+          /> */}
+          {/* <SponsorCard
             imageUrl="https://res.cloudinary.com/earthian/image/upload/v1709451463/Triveni2K24/sposors/bybopbkfglznxtteqau0.png"
             title="Stall Partner"
             name="Level Up"
-          />
+          /> */}
+
           <SponsorCard
-            imageUrl="https://res.cloudinary.com/earthian/image/upload/v1709451477/Triveni2K24/sposors/ednlwbuapbfwy9hvz043.png"
-            title="Goodies Partner"
-            name="Nutsweet"
-          />
-          <SponsorCard
-            imageUrl="https://res.cloudinary.com/earthian/image/upload/v1709451462/Triveni2K24/sposors/htowue5wweilsfvfl5ll.jpg"
-            title="Learning Partner"
-            name="Priyesh Sir Vidyapeeth"
+            imageUrl="https://res.cloudinary.com/dk6oyez3u/image/upload/f_auto,q_auto/ovopu7oqevddmvblftzp"
+            title="Education Partner"
+            name="Edugate"
           />
           <SponsorCard
             imageUrl="https://res.cloudinary.com/dk6oyez3u/image/upload/f_auto,q_auto/ba3xyshztj1vy4anwnmg"
@@ -81,24 +91,45 @@ export default function page() {
             name="Monster Energy"
           />
           <SponsorCard
-            imageUrl="https://cdn2.allevents.in/media-kit/png/ae-logo-portrait-white-vector.png"
-            title="Ticketing Partner"
-            name="All Events"
+            imageUrl="https://res.cloudinary.com/earthian/image/upload/v1709451462/Triveni2K24/sposors/htowue5wweilsfvfl5ll.jpg"
+            title="Learning Partner"
+            name="Priyesh Sir Vidyapeeth"
           />
           <SponsorCard
-            imageUrl="https://res.cloudinary.com/dk6oyez3u/image/upload/f_auto,q_auto/gxcw8iztyuv09ciogqgd"
-            title="Beatboxing Partner"
-            name="Vadodara Beatbox Community"
+            imageUrl="https://res.cloudinary.com/earthian/image/upload/v1709451477/Triveni2K24/sposors/ednlwbuapbfwy9hvz043.png"
+            title="Goodies Partner"
+            name="Nutsweet"
           />
+
           <SponsorCard
             imageUrl="https://res.cloudinary.com/dk6oyez3u/image/upload/f_auto,q_auto/qdp1m62n2w7erssr4l1n"
             title="Gromming Partner"
             name="No Scars"
           />
           <SponsorCard
-            imageUrl="https://res.cloudinary.com/dk6oyez3u/image/upload/f_auto,q_auto/logjvgtc54nsuaj9dkwl"
-            title="Hydration Partner"
-            name="Torque"
+            imageUrl="https://res.cloudinary.com/dk6oyez3u/image/upload/f_auto,q_auto/u34futrkzlkogqx8v2tx"
+            title="Food Partner"
+            name="Masala Maarke"
+          />
+          <SponsorCard
+            imageUrl="https://res.cloudinary.com/dk6oyez3u/image/upload/f_auto,q_auto/gt6zqyqiea7rodefl3lz"
+            title="Food Partner"
+            name="Puff.com"
+          />
+          <SponsorCard
+            imageUrl="https://res.cloudinary.com/dk6oyez3u/image/upload/f_auto,q_auto/nl3qnugb9oijtvdpfvvx"
+            title="Supporting Partner"
+            name="eChai"
+          />
+          <SponsorCard
+            imageUrl="https://res.cloudinary.com/earthian/image/upload/v1709451460/Triveni2K24/sposors/tawrtlw4tolbgjwt4kjg.png"
+            title="Event Partner"
+            name="My Global Connect"
+          />
+          <SponsorCard
+            imageUrl="https://res.cloudinary.com/dk6oyez3u/image/upload/f_auto,q_auto/gxcw8iztyuv09ciogqgd"
+            title="Beatboxing Partner"
+            name="Vadodara Beatbox Community"
           />
         </div>
       </div>

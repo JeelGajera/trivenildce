@@ -1,4 +1,4 @@
-import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
+import { Instagram, Linkedin } from "lucide-react";
 
 export const NAV_ITEMS = [
   {
@@ -14,12 +14,12 @@ export const NAV_ITEMS = [
     href: "/sponsors",
   },
   {
-    label: "Contact",
-    href: "/contact",
-  },
-  {
     label: "Team",
     href: "/team",
+  },
+  {
+    label: "Contact",
+    href: "/contact",
   },
 ];
 
@@ -35,6 +35,10 @@ export const MAIN_PAGE_REFLECTIVE_NAV_LINKS = [
   {
     label: "Sponsors",
     href: "/sponsors ",
+  },
+  {
+    label: "Team",
+    href: "/team",
   },
   {
     label: "Contact",
