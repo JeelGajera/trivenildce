@@ -97,8 +97,8 @@ export default function page() {
           />
           <SponsorCard
             imageUrl="https://res.cloudinary.com/dk6oyez3u/image/upload/f_auto,q_auto/logjvgtc54nsuaj9dkwl"
-            title="Gromming Partner"
-            name="Hydration Partner"
+            title="Hydration Partner"
+            name="Torque"
           />
         </div>
       </div>

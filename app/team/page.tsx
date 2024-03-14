@@ -1,27 +1,21 @@
 "use client";
 
+import TeamProfile from "@/components/sections/TeamProfile";
 import { Badge } from "@/components/ui/badge";
 import React, { useEffect, useState } from "react";
-import { team } from "./data";
-import TeamProfile from "@/components/sections/TeamProfile";
+import { team as teamData } from "./data";
 
-const sections = [
-  "founders",
-  "advisors",
-  "conveners",
-  "heads",
-  "members",
-] as const;
-
-type Section = (typeof sections)[number];
+const teams = Object.keys(teamData);
 
 function Page() {
-  const [section, setSection] = useState<Section>("founders");
-  const [members, setMembers] = useState(team[section]);
+  const [team, setTeam] = useState(teams[0]);
+
+  const [members, setMembers] = useState(teamData.founders);
 
   useEffect(() => {
-    setMembers(team[section]);
-  }, [section]);
+    // @ts-ignore
+    setMembers(teamData[team]);
+  }, [team]);
 
   return (
     <>
@@ -35,34 +29,33 @@ function Page() {
       </div>
       <div className="my-5 container">
         <div className="flex overflow-x-auto flex-shrink-0 gap-2 my-5">
-          {sections.map((s) => {
+          {teams.map((t) => {
             return (
               <Badge
-                key={s}
-                variant={section === s ? "default" : "outline"}
+                key={t}
+                variant={team === t ? "default" : "outline"}
                 className="text-white mr-1 cursor-pointer my-2"
                 onClick={() => {
-                  setSection(s);
+                  setTeam(t);
                 }}
               >
-                {s}
+                {t}
               </Badge>
             );
           })}
         </div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-4 container">
-        {members.length === 0
+        {members && members.length === 0
           ? "No found"
           : members.map((m) => {
               return (
-                <React.Fragment key={m.Timestamp}>
+                <React.Fragment key={m.email}>
                   <TeamProfile
-                    mail={m.Username}
-                    name={m.Name}
-                    phone={m["Phone Number"].toString()}
-                    role={m["Position/ Role in Triveni"]}
-                    image={m.Photo}
+                    mail={m.email}
+                    name={m.name}
+                    role={m.role}
+                    image={m.image || "/images/placeholder-user.png"}
                   />
                 </React.Fragment>
               );
