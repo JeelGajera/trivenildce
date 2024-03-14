@@ -627,6 +627,31 @@ export const team = {
       image:
         "https://res.cloudinary.com/dk6oyez3u/image/upload/f_auto,q_auto/ypb4yj8ayudzpromffih",
     },
+    {
+      Timestamp: "3/11/2024 10:10:34",
+      name: "Satyam Sinha ",
+      number: 9065284740,
+      department: "EC ",
+      Semester: 8,
+      email: "ssinhanwd2019@gmail.com",
+      team: "Founders",
+      role: "Co-Founder & Advisor",
+      image:
+        "https://res.cloudinary.com/dxr9qcs8l/image/upload/v1682013812/Prakalpa-Main/Team/Satyam_Sinha_-_Satyam_Sinha_sk7ge0.webp",
+    },
+    {
+      Timestamp: "3/11/2024 10:10:34",
+      name: "Nagesh Parmar",
+      number: 7600922879,
+      department: "Civil ",
+      Semester: 8,
+      linkedin: "https://www.linkedin.com/in/nagesh-abhilash-parmar-9b762b147",
+      email: "naparmar24@gmail.com",
+      team: "Founders",
+      role: "Co-Founder & Advisor",
+      image:
+        "https://res.cloudinary.com/dxr9qcs8l/image/upload/v1682021607/Prakalpa-Main/Team/IMG-20230420-WA0045_-_Nagesh_Abhilash_Parmar_tuk9mc.jpg",
+    },
   ],
   "Campaigning & Operation": [
     {
