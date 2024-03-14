@@ -47,6 +47,7 @@ export default function RootLayout({
       <Head>
         <meta charSet="utf-8" />
         <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <meta name="google-adsense-account" content="ca-pub-8164117122618034" />
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
         <meta name="theme-color" content="#000000" />
         <link rel="preload" fetchPriority="high" href="https://res.cloudinary.com/earthian/video/upload/v1710059894/Triveni2K24/LDCE_Campus_sukcok.mp4" as="video" />
