@@ -136,6 +136,11 @@ export default function page() {
             title="Beatboxing Partner"
             name="Vadodara Beatbox Community"
           />
+          <SponsorCard
+            imageUrl="https://res.cloudinary.com/dk6oyez3u/image/upload/f_auto,q_auto/cenm6d8zx7npdt9hnqn9"
+            title="Outdoor Media Partner"
+            name="Chitra"
+          />
         </div>
       </div>
     </>
