@@ -74,16 +74,26 @@ export default function page() {
             title="Stall Partner"
             name="Canam"
           /> */}
-          {/* <SponsorCard
-            imageUrl="https://res.cloudinary.com/earthian/image/upload/v1709451463/Triveni2K24/sposors/bybopbkfglznxtteqau0.png"
-            title="Stall Partner"
-            name="Level Up"
-          /> */}
 
           <SponsorCard
             imageUrl="https://res.cloudinary.com/dk6oyez3u/image/upload/f_auto,q_auto/ovopu7oqevddmvblftzp"
             title="Education Partner"
             name="Edugate"
+          />
+          <SponsorCard
+            imageUrl="https://res.cloudinary.com/dk6oyez3u/image/upload/f_auto,q_auto/av1ly50crpoejmsywijq"
+            title="Stall Partner"
+            name="Aspire Square"
+          />
+          <SponsorCard
+            imageUrl="https://res.cloudinary.com/earthian/image/upload/v1709451463/Triveni2K24/sposors/bybopbkfglznxtteqau0.png"
+            title="Stall Partner"
+            name="Level Up"
+          />
+          <SponsorCard
+            imageUrl="https://res.cloudinary.com/earthian/image/upload/v1709451460/Triveni2K24/sposors/tawrtlw4tolbgjwt4kjg.png"
+            title="Event Partner"
+            name="My Global Connect"
           />
           <SponsorCard
             imageUrl="https://res.cloudinary.com/dk6oyez3u/image/upload/f_auto,q_auto/ba3xyshztj1vy4anwnmg"
@@ -113,7 +123,7 @@ export default function page() {
           />
           <SponsorCard
             imageUrl="https://res.cloudinary.com/dk6oyez3u/image/upload/f_auto,q_auto/gt6zqyqiea7rodefl3lz"
-            title="Food Partner"
+            title="Goodies Partner"
             name="Puff.com"
           />
           <SponsorCard
@@ -121,15 +131,21 @@ export default function page() {
             title="Supporting Partner"
             name="eChai"
           />
+
           <SponsorCard
-            imageUrl="https://res.cloudinary.com/earthian/image/upload/v1709451460/Triveni2K24/sposors/tawrtlw4tolbgjwt4kjg.png"
-            title="Event Partner"
-            name="My Global Connect"
+            imageUrl="https://res.cloudinary.com/dk6oyez3u/image/upload/f_auto,q_auto/cenm6d8zx7npdt9hnqn9"
+            title="Outdoor Media Partner"
+            name="Chitra"
           />
           <SponsorCard
             imageUrl="https://res.cloudinary.com/dk6oyez3u/image/upload/f_auto,q_auto/gxcw8iztyuv09ciogqgd"
             title="Beatboxing Partner"
             name="Vadodara Beatbox Community"
+          />
+          <SponsorCard
+            imageUrl="https://res.cloudinary.com/earthian/image/upload/v1710527574/Triveni2K24/png_20230619_191606_0000_qnmphi.png"
+            title="Food Partner"
+            name="Burger Mania"
           />
         </div>
       </div>
