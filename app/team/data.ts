@@ -783,7 +783,7 @@ export const team = {
     {
       time: "3/4/2024 19:14:19",
       email: "naitikmonapara@gmail.com",
-      name: "Monapara naitik kishorbhai",
+      name: "Monapara Naitik",
       role: "Core team head",
       Department: "Biomedical",
       Semester: 6,
@@ -796,7 +796,7 @@ export const team = {
       time: "3/9/2024 0:34:59",
       email: "sanskritisharma366@gmail.com",
       name: "Sanskriti Sharma",
-      role: "Core team",
+      role: "Core team member",
       Department: "Environment",
       Semester: 4,
       "Enrollment no": 220280113048,
@@ -808,7 +808,7 @@ export const team = {
       time: "3/11/2024 12:49:01",
       email: "omdave2293@gmail.com",
       name: "Om Dave",
-      role: "Co-team",
+      role: "Core team member",
       Department: "Environment",
       Semester: 4,
       "Enrollment no": 220280113010,
@@ -827,6 +827,30 @@ export const team = {
       "Phone Number": 9624609510,
       image:
         "https://res.cloudinary.com/dk6oyez3u/image/upload/f_auto,q_auto/hdkzo82wc6jmsryvoz9v",
+    },
+    {
+      time: "3/9/2024 11:32:56",
+      email: "palshah1210@gmail.com",
+      name: "Pal Shah",
+      role: "Core team member",
+      image:
+        "https://res.cloudinary.com/earthian/image/upload/v1710526749/Triveni2K24/1000002380_-_Pal_Shah_team_te3t2q.jpg",
+    },
+    {
+      time: "3/9/2024 11:32:56",
+      email: "krishpatel21102004@gmail.com",
+      name: "Patel Krish",
+      role: "Core team member",
+      image:
+        "https://res.cloudinary.com/earthian/image/upload/v1710526740/Triveni2K24/krish_patel_team_wamnpq.png",
+    },
+    {
+      time: "3/9/2024 11:32:56",
+      email: "teerthraval1234@gmail.com",
+      name: "Teerth Raval ",
+      role: "Core team member",
+      image:
+        "https://res.cloudinary.com/earthian/image/upload/v1710526743/Triveni2K24/teerth_raval_team_lzc6cz.png",
     },
   ],
   "Production & PR Team": [
