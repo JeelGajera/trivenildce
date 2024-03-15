@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import React, { useEffect, useState } from "react";
 import { team as teamData } from "./data";
 import { cn } from "@/lib/utils";
+import { flushSync } from "react-dom";
 
 const teams = Object.keys(teamData);
 
@@ -56,7 +57,7 @@ function Page() {
           ? "No found"
           : members.map((m) => {
               return (
-                <React.Fragment key={m.email}>
+                <React.Fragment key={m.image}>
                   <TeamProfile
                     mail={m.email}
                     name={m.name}
