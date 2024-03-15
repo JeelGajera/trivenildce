@@ -107,6 +107,11 @@ export default function page() {
             name="No Scars"
           />
           <SponsorCard
+            imageUrl="https://res.cloudinary.com/dk6oyez3u/image/upload/f_auto,q_auto/av1ly50crpoejmsywijq"
+            title="Stall Partner"
+            name="Aspire Square"
+          />
+          <SponsorCard
             imageUrl="https://res.cloudinary.com/dk6oyez3u/image/upload/f_auto,q_auto/u34futrkzlkogqx8v2tx"
             title="Food Partner"
             name="Masala Maarke"
