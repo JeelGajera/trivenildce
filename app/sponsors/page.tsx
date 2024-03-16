@@ -82,7 +82,7 @@ export default function page() {
           />
           <SponsorCard
             imageUrl="https://res.cloudinary.com/dk6oyez3u/image/upload/f_auto,q_auto/av1ly50crpoejmsywijq"
-            title="Stall Partner"
+            title="Learning Partner"
             name="Aspire Square"
           />
           <SponsorCard
