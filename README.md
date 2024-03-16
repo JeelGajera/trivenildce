@@ -15,6 +15,13 @@ Our college fest is envisioned as a dynamic amalgamation of diverse experiences,
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
+<table>
+  <tbody>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://jeelgajera.vercel.app"><img src="https://avatars.githubusercontent.com/u/83470656?v=4?s=100" width="100px;" alt="Jeel Gajera"/><br /><sub><b>Jeel Gajera</b></sub></a><br /><a href="#code-JeelGajera" title="Code">💻</a> <a href="#design-JeelGajera" title="Design">🎨</a> <a href="#infra-JeelGajera" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a></td>
+    </tr>
+  </tbody>
+</table>
 
 <!-- markdownlint-restore -->
 <!-- prettier-ignore-end -->
