@@ -1,4 +1,23 @@
 {
-  "projectName": "TriveniLDCE 2K24",
-  "projectOwner": "JeelGajera"
+  "projectName": "trivenildce",
+  "projectOwner": "JeelGajera",
+  "files": [
+    "README.md"
+  ],
+  "commitType": "docs",
+  "commitConvention": "angular",
+  "contributorsPerLine": 7,
+  "contributors": [
+    {
+      "login": "JeelGajera",
+      "name": "Jeel Gajera",
+      "avatar_url": "https://avatars.githubusercontent.com/u/83470656?v=4",
+      "profile": "https://jeelgajera.vercel.app",
+      "contributions": [
+        "code",
+        "design",
+        "infra"
+      ]
+    }
+  ]
 }
