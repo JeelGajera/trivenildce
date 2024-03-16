@@ -1,36 +1,28 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+![trivenildce](https://socialify.git.ci/JeelGajera/trivenildce/image?description=1&descriptionEditable=Embark%20On%20The%20Journey%20of%20Inno-Culture%20-%20Triveni%202K24%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20www.trivenildce.in&font=Inter&forks=1&issues=1&language=1&name=1&owner=1&pattern=Plus&pulls=1&stargazers=1&theme=Dark)
 
-## Getting Started
+# Triveni LDCE 2K24 
 
-First, run the development server:
+L.D. College of Engineering, Ahmedabad presents
+Triveni 2k24 - Embark on the journey of InnoCulture
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ✨ About Us
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Our college fest is envisioned as a dynamic amalgamation of diverse experiences, uniting students from varied backgrounds. Beyond mere entertainment, the objective is to create an indelible and meaningful experience. The emphasis lies in celebrating diversity – where talents, ideas, and cultures harmoniously converge. This fest aims to transcend the ordinary, fostering connections, nurturing creativity, and instilling a profound sense of community spirit.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## 🧑‍💻Contributors
 
-## Learn More
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
 
-To learn more about Next.js, take a look at the following resources:
+<!-- ALL-CONTRIBUTORS-LIST:END -->
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🔗 Links
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/company/triveni-ldec/)
+[![instagram](https://img.shields.io/badge/instagra-f58a00?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/triveni_ldce/)
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+![Logo](public/images/logo_full.png)
