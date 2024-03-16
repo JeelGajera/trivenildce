@@ -18,6 +18,18 @@
         "design",
         "infra"
       ]
+    },
+    {
+      "login": "mdhruvil",
+      "name": "Dhruvil Moradiya",
+      "avatar_url": "https://avatars.githubusercontent.com/u/132185979?v=4",
+      "profile": "https://github.com/mdhruvil",
+      "contributions": [
+        "code",
+        "design",
+        "infra",
+        "example"
+      ]
     }
   ]
 }

@@ -19,6 +19,7 @@ Our college fest is envisioned as a dynamic amalgamation of diverse experiences,
   <tbody>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://jeelgajera.vercel.app"><img src="https://avatars.githubusercontent.com/u/83470656?v=4?s=100" width="100px;" alt="Jeel Gajera"/><br /><sub><b>Jeel Gajera</b></sub></a><br /><a href="#code-JeelGajera" title="Code">💻</a> <a href="#design-JeelGajera" title="Design">🎨</a> <a href="#infra-JeelGajera" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/mdhruvil"><img src="https://avatars.githubusercontent.com/u/132185979?v=4?s=100" width="100px;" alt="Dhruvil Moradiya"/><br /><sub><b>Dhruvil Moradiya</b></sub></a><br /><a href="#code-mdhruvil" title="Code">💻</a> <a href="#design-mdhruvil" title="Design">🎨</a> <a href="#infra-mdhruvil" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="#example-mdhruvil" title="Examples">💡</a></td>
     </tr>
   </tbody>
 </table>
