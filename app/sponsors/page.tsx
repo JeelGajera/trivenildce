@@ -147,6 +147,11 @@ export default function page() {
             title="Food Partner"
             name="Burger Mania"
           />
+          <SponsorCard
+            imageUrl="https://res.cloudinary.com/earthian/image/upload/v1710559887/Triveni2K24/mess_door_culuki.png"
+            title="Goodies Partner"
+            name="Messy door cafe"
+          />
         </div>
       </div>
     </>
