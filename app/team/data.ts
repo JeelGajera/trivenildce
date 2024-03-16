@@ -702,7 +702,7 @@ export const team = {
       "Enrollment no": 220280113003,
       "Phone Number": 8141265766,
       image:
-        "https://res.cloudinary.com/dk6oyez3u/image/upload/f_auto,q_auto/umqis45hp6x9n7s2eehh",
+        "https://res.cloudinary.com/dk6oyez3u/image/upload/f_auto,q_auto/qzzm7hytgi2krptsfkll",
     },
     {
       time: "3/3/2024 14:22:51",
