@@ -908,6 +908,22 @@ export const team = {
       image:
         "https://res.cloudinary.com/earthian/image/upload/v1710447006/Triveni2K24/jemil_team_zsvkph.jpg",
     },
+    {
+      time: "3/12/2024 22:21:17",
+      email: null,
+      name: "Niket Patel",
+      role: "Production Team Member",
+      image:
+        "https://res.cloudinary.com/earthian/image/upload/v1710611510/Triveni2K24/niket_patel_team_b9uyu2.jpg",
+    },
+    {
+      time: "3/12/2024 22:21:17",
+      email: null,
+      name: "Dhruv Patel",
+      role: "Production Team Member",
+      image:
+        "https://res.cloudinary.com/earthian/image/upload/v1710611513/Triveni2K24/dhruv_patel_team_bys6k3.jpg",
+    },
   ],
   "Web Development": [
     {
