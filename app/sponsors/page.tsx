@@ -151,6 +151,16 @@ export default function page() {
             title="Goodies Partner"
             name="Messy door cafe"
           />
+          <SponsorCard
+            imageUrl="https://res.cloudinary.com/dk6oyez3u/image/upload/f_auto,q_auto/yebt2tlpk3i5eu7mnavl"
+            title="Printing Partner"
+            name="Plezer Digital Imaging"
+          />
+          <SponsorCard
+            imageUrl="https://res.cloudinary.com/earthian/image/upload/v1710773712/Triveni2K24/sposors/AWA_iaa5df.png"
+            title="Social Media Partner"
+            name="Amdavad with Amdavadi"
+          />
         </div>
       </div>
     </>
