@@ -156,6 +156,11 @@ export default function page() {
             title="Printing Partner"
             name="Plezer Digital Imaging"
           />
+          <SponsorCard
+            imageUrl="https://res.cloudinary.com/earthian/image/upload/v1710773712/Triveni2K24/sposors/AWA_iaa5df.png"
+            title="Social Media Partner"
+            name="Amdavad with Amdavadi"
+          />
         </div>
       </div>
     </>
