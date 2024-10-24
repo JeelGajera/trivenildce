@@ -94,12 +94,6 @@ const Footer = () => {
                   >
                     triveni@ldce.ac.in
                   </a>
-                  <a
-                    href="tel:+918141265766"
-                    className="hover:opacity-70 transition duration-300 hover:underline underline-offset-2"
-                  >
-                    +91 81412 65766
-                  </a>
                 </div>
               </div>
             </div>
